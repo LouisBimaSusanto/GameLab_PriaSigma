@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 389871240}
   - component: {fileID: 389871246}
   - component: {fileID: 389871243}
+  - component: {fileID: 389871247}
   - component: {fileID: 389871244}
   - component: {fileID: 389871245}
   m_Layer: 0
@@ -290,7 +291,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -353,6 +354,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarSteering
   turnSpeed: 200
+--- !u!114 &389871247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389871237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4756899d30a8c5d40b9dec0866a6cd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarJump
+  jumpScale: 1.2
+  jumpDuration: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +475,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 17.121666
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -790,7 +805,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 17.121666
+    OrthographicSize: 6.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
