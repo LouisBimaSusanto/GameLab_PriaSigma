@@ -6,6 +6,7 @@ public class CarController : MonoBehaviour
     CarMovement movement;
     CarSteering steering;
     DriftController drift;
+    CarJump jump;
 
     private void Awake()
     {
@@ -13,13 +14,12 @@ public class CarController : MonoBehaviour
         movement = GetComponent<CarMovement>();
         steering = GetComponent<CarSteering>();
         drift = GetComponent<DriftController>();
+        jump = GetComponent<CarJump>();
     }
 
     private void Update()
     {
         drift.HandelDrift(input.Horizontal);
-
-        steering.Steer(input.Horizontal);
 
         if (drift.isDrifting)
         {
@@ -29,10 +29,16 @@ public class CarController : MonoBehaviour
         {
             steering.turnSpeed = 200f;
         }
+
+        if (input.JumpPressed)
+        {
+            jump.Jump();
+        }
     }
 
     private void FixedUpdate()
     {
         movement.MoveForward();
+        steering.Steer(input.Horizontal);
     }
 }
