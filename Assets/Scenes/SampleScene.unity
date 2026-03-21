@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55929429779312f41821890e40f74e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallObstacle
-  bounceForce: 15
+  bounceForce: 3
 --- !u!1 &389871237
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarMovement
   speed: 10
-  knockBackDuration: 0.2
+  knockBackDuration: 1
 --- !u!114 &389871242
 MonoBehaviour:
   m_ObjectHideFlags: 0

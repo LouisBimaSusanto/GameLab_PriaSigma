@@ -8,7 +8,7 @@ public class CarMovement : MonoBehaviour
 
     bool isKnockBack = false;
     float knockBackTimer = 0f;
-    public float knockBackDuration = 0.2f;
+    public float knockBackDuration = 0.4f;
 
     private void Awake()
     {
@@ -25,12 +25,6 @@ public class CarMovement : MonoBehaviour
             {
                 isKnockBack = false;
             }
-            else
-            {
-                // pelan-pelan hilang efek knockback
-                rb.linearVelocity *= 0.95f;
-            }
-
             return;
         }
 
@@ -41,7 +35,7 @@ public class CarMovement : MonoBehaviour
     {
         isKnockBack = true;
         knockBackTimer = knockBackDuration;
-
-        rb.linearVelocity = force;
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(force, ForceMode2D.Impulse);
     }
 }
