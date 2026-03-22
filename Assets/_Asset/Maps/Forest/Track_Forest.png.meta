@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d57a9944294dfc146907cd16fa277153
-      internalID: -1052039094
+      spriteID: fd928a33e684eb74290f8c756fb1102b
+      internalID: -3979911
       vertices: []
       indices: 
       edges: []
@@ -198,8 +198,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cb0d16171ca6304d82cbd1e4939cf7c
-      internalID: -1134836164
+      spriteID: cad503845aeec134e88adc7a4ea05bf7
+      internalID: 1676150187
       vertices: []
       indices: 
       edges: []
@@ -220,8 +220,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ad738b791ba7749bbda07eb45d34c5
-      internalID: 438565218
+      spriteID: 97c2510a26ab0a141aaea828369590a7
+      internalID: 540458385
       vertices: []
       indices: 
       edges: []
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b67f38c9613cc14692d06c3c9f39d34
-      internalID: -730009617
+      spriteID: 76264c991caac3f45ad4dab15ebb0847
+      internalID: 1876464846
       vertices: []
       indices: 
       edges: []
@@ -264,8 +264,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf9d77afe0311144906c99385a71e49
-      internalID: 87192592
+      spriteID: 90292827ebb4a584d963d181d59f8b97
+      internalID: 12679927
       vertices: []
       indices: 
       edges: []
@@ -274,32 +274,6 @@ TextureImporter:
       name: Track_Forest_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 0, z: 0, w: 1}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98eb64c8fcd1559469ca95b7a92a3398
-      internalID: -863154674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 112
-        width: 16
-        height: 16
         x: 64
         y: 128
         width: 32
@@ -312,8 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dc422ec58735924199f640d6f9ad1c5
-      internalID: 2031454
+      spriteID: 6abbb622bb7d92c4d99569298aaee8ec
+      internalID: -1761553676
       vertices: []
       indices: 
       edges: []
@@ -334,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74b7ba8f56a23e04e971c1cf2aab8ae2
-      internalID: -1183494342
+      spriteID: 472d1ead8bdd61742ad9bf51c73ffbf3
+      internalID: -1482358838
       vertices: []
       indices: 
       edges: []
@@ -356,8 +330,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab724d4cfe150bb43b35dcca59e7892c
-      internalID: 340335063
+      spriteID: 62676d3d4980d7245b5f299445770dd8
+      internalID: 411876879
       vertices: []
       indices: 
       edges: []
@@ -378,8 +352,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4252b1f49ce6d9148aebb9def555b695
-      internalID: 2129384642
+      spriteID: a3b852c18a39bb040a42c09f7dc0e439
+      internalID: 2026041181
       vertices: []
       indices: 
       edges: []
@@ -400,8 +374,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb4963b10d42b174fb048a32daf4a9d0
-      internalID: 1681932762
+      spriteID: e2eea9db82b882f43a22aa02c136cfef
+      internalID: -1940571235
       vertices: []
       indices: 
       edges: []
@@ -422,8 +396,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceed84e83d4869f4d9aab6b5af0f5920
-      internalID: -1017259876
+      spriteID: e1cf749bf92267d40b8274b1931c6b79
+      internalID: 1729868360
       vertices: []
       indices: 
       edges: []
@@ -444,8 +418,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdc5c4fd4c8ce044686cb7c500cda439
-      internalID: -441428234
+      spriteID: 3007677097d12154c865e11fdea5a84b
+      internalID: -2110987601
       vertices: []
       indices: 
       edges: []
@@ -466,8 +440,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79bbb2ef1be617148b98d4d2f9134f45
-      internalID: 1722373629
+      spriteID: 02df916916a359d42b9cbc33611ec3d2
+      internalID: 94950501
       vertices: []
       indices: 
       edges: []
@@ -488,8 +462,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d685deb92f2bbc4bba04324454420fc
-      internalID: -1275537442
+      spriteID: 298bc00d341f9fa43b2f092c87efe65e
+      internalID: -2063599466
       vertices: []
       indices: 
       edges: []
@@ -510,8 +484,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3013aeee043ce1e4eba314a998906211
-      internalID: 263653832
+      spriteID: 412b3c7c21935c84eb05567b086a2400
+      internalID: -539388768
       vertices: []
       indices: 
       edges: []
@@ -532,8 +506,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f438b8a79f24744f8abc90663802c35
-      internalID: -905351817
+      spriteID: a2b4de4b2d7a93e4892a84f95fa86eb6
+      internalID: 1788966781
       vertices: []
       indices: 
       edges: []
@@ -554,8 +528,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62d9cc61adbcc4b4198dbd3e79b5f424
-      internalID: -1647568474
+      spriteID: a351f49fb8e13924783c305998769577
+      internalID: 826541875
       vertices: []
       indices: 
       edges: []
@@ -576,8 +550,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f6acee02759ef047b12c359ab1c8d7e
-      internalID: 1946167915
+      spriteID: 0157201e96fff854d817f7b919b341ce
+      internalID: 2031129049
       vertices: []
       indices: 
       edges: []
@@ -598,8 +572,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c49511cb4ed59a84494c0f1f5f418679
-      internalID: 93524521
+      spriteID: a242e3a46d0dc3f4cb7c9c2aaf3d1590
+      internalID: 1781434626
       vertices: []
       indices: 
       edges: []
@@ -620,8 +594,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 242a5f9f4f22d9a45ac34ee27f10f43c
-      internalID: -1632169824
+      spriteID: 9d4999ed821da5a4e9afd13adef3ba70
+      internalID: -1050302586
       vertices: []
       indices: 
       edges: []
@@ -642,8 +616,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f33e414253343a449b668b25503b52b8
-      internalID: 393626510
+      spriteID: c2548f74360907f4b91b650229ad38bf
+      internalID: 974380474
       vertices: []
       indices: 
       edges: []
@@ -664,8 +638,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68b25311a39e1a247a9e6e140ecbe379
-      internalID: -189286777
+      spriteID: 1e309577c856977419dfbd5503728e9b
+      internalID: -233255684
       vertices: []
       indices: 
       edges: []
@@ -674,868 +648,6 @@ TextureImporter:
       name: Track_Forest_23
       rect:
         serializedVersion: 2
-        x: 112
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cd3063db8fea46428ca066ae92fc565
-      internalID: -49158025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25432a5cd7dc5464da5f398f5e35e771
-      internalID: -503770517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_25
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b2eea0457da38b41aacec5f4dea2984
-      internalID: -990052337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_26
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ff90e030fc5efa4db2e589ba1b89bef
-      internalID: 1607709567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_27
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb010c8095633074cb2d22ccbcc2600c
-      internalID: -941511539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_28
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee84ec9d9d1a53a4bb943ed8c3596a24
-      internalID: 1112815716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_29
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95011883909d65649952396537794c70
-      internalID: -298326862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_30
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f11cd4ab592c671418627b1b91e07584
-      internalID: -1704247142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_31
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c729f66844899540a7124ade7b082cf
-      internalID: -193653669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_32
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 315374c8855abd844918b0c48010867a
-      internalID: 2020177795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_33
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3d048f5bc302ff4791126324ccd8cf6
-      internalID: 1488994387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_34
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b9289868f7828c41b7ea1ec06a02021
-      internalID: -383734433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_35
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a3d574793ad18f4894db228b5b5bdda
-      internalID: -654660510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_36
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ec521f3623f8194da7a311adb0d3197
-      internalID: -66990577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_37
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1c8a897060a31e4db93a8e0dcba9a2e
-      internalID: -715839493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_38
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38d80853e6da03f4fbcc9256ff9827e9
-      internalID: 1393181181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_39
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afcd566e256f51a4f8479ceb88089e3c
-      internalID: -1516898773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_40
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60debb1469c01d04baf0de5548b8c634
-      internalID: 1340937267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_41
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f676e6cc4c5a1404c94831c4bb0e466b
-      internalID: 1991644736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_42
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e05581a83d4c83540b6a9816768e5408
-      internalID: 528523834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_43
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ece364e6b01b3440bbc0abc5ee8ecff
-      internalID: -1922991226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_44
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff7de424706d4f84b836b7fc93b33b5e
-      internalID: -236771558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_45
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5df0ea49042a1434fb894b4ceb273dc4
-      internalID: 1164152260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_46
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cf6abb304ea5044cb792a7264b9efc5
-      internalID: 577602607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_47
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 790d0c10264bb5b42bdbe11bae50af73
-      internalID: 341534385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_48
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83aea04bf438b9342804fd916a25d4e5
-      internalID: 1077365171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_49
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32a522f8e8efff24cac859f6865bc625
-      internalID: -2011267411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_50
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc8db88601dfb8e4982667698996f415
-      internalID: 1725945866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_51
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 576b0f93536ca484ebfa36827593e56e
-      internalID: 1074680597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_52
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18f8c5335e43c2942aecf52c3b4bca2c
-      internalID: 856054993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_53
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2084e46abc78b6141bddcbc01bee7101
-      internalID: 565947661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_54
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd15072d608f8e34b9878377698c71e6
-      internalID: -1465626850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_55
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d4e0fbf0d2a8f74a95872868c764e50
-      internalID: 50238158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_56
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42843d5de6a326648b86680e2745ba8d
-      internalID: 1529715248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_57
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c916389c1df16f8478870f1e8ffb944b
-      internalID: -1718592898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_58
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16816098d5846344488fb5e7b5c465be
-      internalID: -183986625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_59
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 370e900174050024f9033f4ff0f28c39
-      internalID: -2007041140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_60
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0db78f11386973844b5cdf39397fc198
-      internalID: -468246284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_61
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f3d394c752e4d54eb3337038fe9bd48
-      internalID: -1282876588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_62
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
         x: 96
         y: 0
         width: 32
@@ -1548,32 +660,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2e1402aa84ef644abe2c2b0eae0ea7
-      internalID: 103948782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Track_Forest_63
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02fff59bb877e36489e0fa0a7c09ffe0
-      internalID: 2128572556
-      spriteID: 77b01bd8a6abdfe46846fb0cd24ec359
-      internalID: -2124175678
+      spriteID: f2026093440bd144f808511b1274a6b2
+      internalID: -767024443
       vertices: []
       indices: 
       edges: []
@@ -1582,7 +670,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7d1628c1499d02e459d004dca15df0fe
+    spriteID: 4d641542b5395944fb1341f5b1daa525
     internalID: 0
     vertices: []
     indices: 
@@ -1592,98 +680,32 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
-    nameFileIdTable:
-      Track_Forest_0: 7388305501694538278
-      Track_Forest_1: 182330217
-      Track_Forest_10: 1544110221
-      Track_Forest_11: 285123229
-      Track_Forest_12: -888286205
-      Track_Forest_13: -1558354354
-      Track_Forest_14: -660968110
-      Track_Forest_15: 1322460795
-      Track_Forest_16: 2081945831
-      Track_Forest_17: 520280331
-      Track_Forest_18: 9099882
-      Track_Forest_19: 1885065454
-      Track_Forest_2: -530255615
-      Track_Forest_20: 1808073128
-      Track_Forest_21: -291916542
-      Track_Forest_22: 2063719191
-      Track_Forest_23: -49158025
-      Track_Forest_24: -503770517
-      Track_Forest_25: -990052337
-      Track_Forest_26: 1607709567
-      Track_Forest_27: -941511539
-      Track_Forest_28: 1112815716
-      Track_Forest_29: -298326862
-      Track_Forest_3: 1404347276
-      Track_Forest_30: -1704247142
-      Track_Forest_31: -193653669
-      Track_Forest_32: 2020177795
-      Track_Forest_33: 1488994387
-      Track_Forest_34: -383734433
-      Track_Forest_35: -654660510
-      Track_Forest_36: -66990577
-      Track_Forest_37: -715839493
-      Track_Forest_38: 1393181181
-      Track_Forest_39: -1516898773
-      Track_Forest_4: -1803612511
-      Track_Forest_40: 1340937267
-      Track_Forest_41: 1991644736
-      Track_Forest_42: 528523834
-      Track_Forest_43: -1922991226
-      Track_Forest_44: -236771558
-      Track_Forest_45: 1164152260
-      Track_Forest_46: 577602607
-      Track_Forest_47: 341534385
-      Track_Forest_48: 1077365171
-      Track_Forest_49: -2011267411
-      Track_Forest_5: 2029634624
-      Track_Forest_50: 1725945866
-      Track_Forest_51: 1074680597
-      Track_Forest_52: 856054993
-      Track_Forest_53: 565947661
-      Track_Forest_54: -1465626850
-      Track_Forest_55: 50238158
-      Track_Forest_56: 1529715248
-      Track_Forest_57: -1718592898
-      Track_Forest_58: -183986625
-      Track_Forest_59: -2007041140
-      Track_Forest_6: -863154674
-      Track_Forest_60: -468246284
-      Track_Forest_61: -1282876588
-      Track_Forest_62: 103948782
-      Track_Forest_63: 2128572556
-      Track_Forest_7: -2008056175
-      Track_Forest_8: -1389905509
-      Track_Forest_9: 740287621
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Track_Forest_0: 7388305501694538278
-      Track_Forest_1: -1052039094
-      Track_Forest_10: 1681932762
-      Track_Forest_11: -1017259876
-      Track_Forest_12: -441428234
-      Track_Forest_13: 1722373629
-      Track_Forest_14: -1275537442
-      Track_Forest_15: 263653832
-      Track_Forest_16: -905351817
-      Track_Forest_17: -1647568474
-      Track_Forest_18: 1946167915
-      Track_Forest_19: 93524521
-      Track_Forest_2: -1134836164
-      Track_Forest_20: -1632169824
-      Track_Forest_21: 393626510
-      Track_Forest_22: -189286777
-      Track_Forest_23: -2124175678
-      Track_Forest_3: 438565218
-      Track_Forest_4: -730009617
-      Track_Forest_5: 87192592
-      Track_Forest_6: 2031454
-      Track_Forest_7: -1183494342
-      Track_Forest_8: 340335063
-      Track_Forest_9: 2129384642
+      Track_Forest_1: -3979911
+      Track_Forest_10: -1940571235
+      Track_Forest_11: 1729868360
+      Track_Forest_12: -2110987601
+      Track_Forest_13: 94950501
+      Track_Forest_14: -2063599466
+      Track_Forest_15: -539388768
+      Track_Forest_16: 1788966781
+      Track_Forest_17: 826541875
+      Track_Forest_18: 2031129049
+      Track_Forest_19: 1781434626
+      Track_Forest_2: 1676150187
+      Track_Forest_20: -1050302586
+      Track_Forest_21: 974380474
+      Track_Forest_22: -233255684
+      Track_Forest_23: -767024443
+      Track_Forest_3: 540458385
+      Track_Forest_4: 1876464846
+      Track_Forest_5: 12679927
+      Track_Forest_6: -1761553676
+      Track_Forest_7: -1482358838
+      Track_Forest_8: 411876879
+      Track_Forest_9: 2026041181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
