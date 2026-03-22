@@ -24,6 +24,9 @@ public class CarJump : MonoBehaviour
 
         isJumping = true;
 
+        AudioManager.Instance.PlaySFX("jump");
+
+
         carCollider.enabled = false;
 
         Sequence jumpSequence = DOTween.Sequence();
