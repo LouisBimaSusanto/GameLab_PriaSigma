@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 2fc1117f2aaf79148a267d7acd3c3cae
+guid: b6119bc44a16c2742a9a17d98f998dea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8594747668741471765
-    second: Mobil Balap_0
+      213: 5364065808415294095
+    second: PAUSED_0
+  - first:
+      213: -3003374191579657817
+    second: PAUSED_1
+  - first:
+      213: 5381149968372921385
+    second: PAUSED_2
+  - first:
+      213: 7591271750121108062
+    second: PAUSED_3
+  - first:
+      213: -9007857297253040095
+    second: PAUSED_4
+  - first:
+      213: -7413340977524443710
+    second: PAUSED_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +129,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,7 +142,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mobil Balap_0
+      name: PAUSED_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 12
-        height: 16
+        width: 49
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +169,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be14c8e388259b880800000000000000
-      internalID: -8594747668741471765
+      spriteID: f828966ce6df07a40800000000000000
+      internalID: 5364065808415294095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSED_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a98157d51fd156d0800000000000000
+      internalID: -3003374191579657817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSED_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924f8fbb26fadaa40800000000000000
+      internalID: 5381149968372921385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSED_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e523d6bbf6d995960800000000000000
+      internalID: 7591271750121108062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSED_4
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 44
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12082d98389adf280800000000000000
+      internalID: -9007857297253040095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSED_5
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5fec398a58e1990800000000000000
+      internalID: -7413340977524443710
       vertices: []
       indices: 
       edges: []
@@ -174,7 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mobil Balap_0: -8594747668741471765
+      PAUSED_0: 5364065808415294095
+      PAUSED_1: -3003374191579657817
+      PAUSED_2: 5381149968372921385
+      PAUSED_3: 7591271750121108062
+      PAUSED_4: -9007857297253040095
+      PAUSED_5: -7413340977524443710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
