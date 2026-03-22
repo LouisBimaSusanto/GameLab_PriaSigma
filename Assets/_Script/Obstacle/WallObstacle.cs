@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class WallObstacle : BaseObstacle
 {
-    public float bounceForce = 8f;
-
+    public float bounceForce = 15f;
     public override void Interact(GameObject player)
-    {
-    }
+    { }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -14,8 +12,9 @@ public class WallObstacle : BaseObstacle
         {
             CarMovement car = collision.gameObject.GetComponent<CarMovement>();
 
-            Vector2 bounceDirection = collision.contacts[0].normal;
+            if (car == null) return;
 
+            Vector2 bounceDirection = -(Vector2)collision.transform.up;
             car.ApplyKnockback(bounceDirection * bounceForce);
         }
     }
