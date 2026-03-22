@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e76d074080159354d9f97daf37d0f1b6
+guid: 2fc1117f2aaf79148a267d7acd3c3cae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5111623119002193603
-    second: Track_Beach_0
+      213: -8594747668741471765
+    second: Mobil Balap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Track_Beach_0
+      name: Mobil Balap_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 128
-        height: 192
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ceccc9e42220f640800000000000000
-      internalID: 5111623119002193603
+      spriteID: be14c8e388259b880800000000000000
+      internalID: -8594747668741471765
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Track_Beach_0: 5111623119002193603
+      Mobil Balap_0: -8594747668741471765
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
