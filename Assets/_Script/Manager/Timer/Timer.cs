@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Timer : MonoBehaviour
     [Header("UI")]
     public TMP_Text timerText;
     public static Timer Instance;
+
+    public event Action OnTimeUp;
 
     private void Awake()
     {
@@ -37,8 +40,7 @@ public class Timer : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Cari TimerUIBinder di scene baru dan ambil referensi timerText-nya
-        TimerUIBinder binder = Object.FindFirstObjectByType<TimerUIBinder>();
-        if (binder != null)
+        TimerUIBinder binder = UnityEngine.Object.FindFirstObjectByType<TimerUIBinder>(); if (binder != null)
         {
             SetTimerText(binder.timerText);
         }
@@ -85,6 +87,7 @@ public class Timer : MonoBehaviour
     void TimeUp()
     {
         Debug.Log("Waktu habis!");
+        OnTimeUp?.Invoke();
         Time.timeScale = 0f;
     }
 

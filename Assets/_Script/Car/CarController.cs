@@ -8,6 +8,8 @@ public class CarController : MonoBehaviour
     DriftController drift;
     CarJump jump;
 
+    public bool CanControl = true;
+
     private void Awake()
     {
         input = GetComponent<InputHandler>();
@@ -19,6 +21,7 @@ public class CarController : MonoBehaviour
 
     private void Update()
     {
+        if(!CanControl) return;
         drift.HandelDrift(input.Horizontal);
 
         if (drift.isDrifting)
@@ -38,6 +41,7 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!CanControl) return;
         movement.MoveForward();
         steering.Steer(input.Horizontal);
     }
