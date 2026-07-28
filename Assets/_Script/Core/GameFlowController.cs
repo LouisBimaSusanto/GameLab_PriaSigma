@@ -7,7 +7,10 @@ public class GameFlowController : MonoBehaviour
 {
     public static GameFlowController Instance { get; private set; }
 
+    [Header("References")]
     [SerializeField] private CarController playerCar;
+    [SerializeField] private PlayerRespawn playerRespawn;
+    [SerializeField] private GameObject sortingUI;
 
     public GameState CurrentState { get; private set; } = GameState.Driving;
     public event Action<GameState> OnStateChanged;
@@ -34,23 +37,71 @@ public class GameFlowController : MonoBehaviour
     {
         if (CurrentState == GameState.Sorting) return;
         CurrentState = GameState.Sorting;
-        playerCar.CanControl = false;
-        OnStateChanged?.Invoke(CurrentState);
+
+        IrisTransition.Instance.PlayTransition(
+            onMidpoint: () =>
+            {
+                // Layar hitam — pause gameplay, tampilkan sorting UI
+                PauseGameplay();
+                sortingUI.SetActive(true);
+                OnStateChanged?.Invoke(CurrentState);
+            }
+        );
     }
 
-    // Panggil dari sorting mini-game pas semua item selesai disortir
+    // Dipanggil dari sorting mini-game saat semua item selesai disortir
     public void ExitSortingPhase()
     {
         if (CurrentState == GameState.Driving) return;
-        CurrentState = GameState.Driving;
+
+        IrisTransition.Instance.PlayTransition(
+            onMidpoint: () =>
+            {
+                // Layar hitam — sembunyikan sorting UI, respawn, naik stage
+                sortingUI.SetActive(false);
+                playerRespawn.Respawn();
+                StageManager.Instance.AdvanceStage();
+                CurrentState = GameState.Driving;
+                OnStateChanged?.Invoke(CurrentState);
+            },
+            onComplete: () =>
+            {
+                // Iris sudah terbuka — resume gameplay
+                ResumeGameplay();
+            }
+        );
+    }
+
+    private void PauseGameplay()
+    {
+        playerCar.CanControl = false;
+
+        // Stop physics tanpa freeze Time.timeScale
+        // (biar Timer tetap jalan selama sorting)
+        Rigidbody2D rb = playerCar.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+    }
+
+    private void ResumeGameplay()
+    {
+        Rigidbody2D rb = playerCar.GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.bodyType = RigidbodyType2D.Dynamic;
+
         playerCar.CanControl = true;
-        StageManager.Instance.AdvanceStage();
-        OnStateChanged?.Invoke(CurrentState);
     }
 
     private void EndGame()
     {
         StageManager.Instance.SaveProgress();
-        // TODO: tampilkan Game Over UI di sini
+        IrisTransition.Instance.CloseOnly(onComplete: () =>
+        {
+            // TODO: tampilkan Game Over UI
+        });
     }
 }

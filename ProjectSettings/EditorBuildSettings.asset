@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/_Scenes/TestingCoreGameplay.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/RealGameplay/UIMenu.unity
+    path: Assets/_Scenes/RealGameplay/UIMenu.unity
     guid: 501901149e7396644bd280e71758cefe
   - enabled: 1
-    path: Assets/Scenes/RealGameplay/City.unity
+    path: Assets/_Scenes/RealGameplay/City.unity
     guid: 55c49aa4da7581648bcbf7e6937a87a6
   - enabled: 1
-    path: Assets/Scenes/RealGameplay/Jungle.unity
+    path: Assets/_Scenes/RealGameplay/Jungle.unity
     guid: e48f9ebb9fbcf0245bf831d98f81331a
   - enabled: 1
-    path: Assets/Scenes/SampleScene 1.unity
+    path: Assets/_Scenes/SampleScene 1.unity
     guid: 6f6c6b56b66dbdf43a83f5e2d696d432
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
