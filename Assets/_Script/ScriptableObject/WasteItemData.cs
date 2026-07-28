@@ -3,7 +3,8 @@ using UnityEngine;
 public enum WasteCategory
 {
     Anorganic,
-    Organic
+    Organic,
+    Limbah
 }
 
 [CreateAssetMenu(fileName = "NewWasteItem", menuName ="Waste Sorter/Waste Item Data")]

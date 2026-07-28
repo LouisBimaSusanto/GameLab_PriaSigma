@@ -4,14 +4,21 @@ using System;
 
 public class SortingDropZone : MonoBehaviour, IDropHandler
 {
-    public event Action OnItemDropped;
+    [SerializeField] private WasteCategory acceptedCategory;
+
+    public event Action<SortingItemUI> OnCorrectDrop;
+    public event Action<SortingItemUI> OnWrongDrop;
 
     public void OnDrop(PointerEventData eventData)
     {
-        // Cek apakah yang di-drop adalah DraggableItem
         if (eventData.pointerDrag == null) return;
-        if (!eventData.pointerDrag.CompareTag("DraggableItem")) return;
 
-        OnItemDropped?.Invoke();
+        SortingItemUI item = eventData.pointerDrag.GetComponent<SortingItemUI>();
+        if (item == null) return;
+
+        if (item.Data.wasteCategory == acceptedCategory)
+            OnCorrectDrop?.Invoke(item);
+        else
+            OnWrongDrop?.Invoke(item);
     }
 }

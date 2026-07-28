@@ -16,3 +16,4 @@ MonoBehaviour:
   wasteCategory: 0
   itemSprite: {fileID: -455014453811102173, guid: 2958e57845f9a974295966b106b448fa, type: 3}
   scoreValue: 1
+  description: Lorem
