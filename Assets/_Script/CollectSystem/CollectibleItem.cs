@@ -72,11 +72,14 @@ public class CollectibleItem : MonoBehaviour, ICollectible
     {
         AudioManager.Instance?.PlaySFX("collect");
 
-        // Hook animasi destroy — isi trigger name-nya nanti pas Animator sudah dibuat
+        // Tambahkan ke inventory player
+        if (data != null)
+            PlayerInventory.Instance?.AddItem(data);
+
         if (animator != null)
         {
             PlayDestroyAnimation();
-            return; // Destroy dipanggil di akhir animasi via Animation Event
+            return;
         }
 
         Destroy(gameObject);
