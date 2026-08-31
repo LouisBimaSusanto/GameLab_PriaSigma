@@ -76,6 +76,9 @@ public class CollectibleItem : MonoBehaviour, ICollectible
         if (data != null)
             PlayerInventory.Instance?.AddItem(data);
 
+        // untuk visual toca sampah
+        TrashBin.Instance?.AddTrash(1);
+
         if (animator != null)
         {
             PlayDestroyAnimation();
