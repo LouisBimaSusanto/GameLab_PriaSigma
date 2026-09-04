@@ -101,9 +101,8 @@ public class SortingUIController : MonoBehaviour
             return;
         }
 
-        StageManager.Instance.BeginSortingSession();
-
         int toSpawn = Mathf.Min(maxItemsOnScreen, PlayerInventory.Instance.ItemCount);
+
         for (int i = 0; i < toSpawn; i++)
         {
             WasteItemData data = PlayerInventory.Instance.DequeueNextItem();
@@ -124,8 +123,6 @@ public class SortingUIController : MonoBehaviour
 
         itemUI.Setup(data);
         activeItems.Add(itemUI);
-
-        StageManager.Instance.RegisterItemToSession(data.scoreValue);
     }
 
     private Vector2 GetRandomPosition()
@@ -139,10 +136,11 @@ public class SortingUIController : MonoBehaviour
         );
     }
 
+
     private void HandleCorrectDrop(SortingItemUI item)
     {
         AudioManager.Instance?.PlaySFX("correct");
-        StageManager.Instance.AddSessionScore(item.Data.scoreValue);
+        StageManager.Instance.AddScore(item.Data.scoreValue);
         activeItems.Remove(item);
 
         item.PlayCorrectAnimation(() =>
@@ -155,7 +153,7 @@ public class SortingUIController : MonoBehaviour
     private void HandleWrongDrop(SortingItemUI item)
     {
         AudioManager.Instance?.PlaySFX("wrong");
-        StageManager.Instance.AddSessionScore(-1);
+        Timer.Instance?.AddTime(-5f);
         item.PlayWrongAnimation();
     }
 
@@ -205,11 +203,7 @@ public class SortingUIController : MonoBehaviour
         DOVirtual.DelayedCall(1.5f, () =>
         {
             emptyStateUI.SetActive(false);
-            SortingResultUI.Instance.Show(
-                StageManager.Instance.SessionScore,
-                StageManager.Instance.SessionPerfectScore,
-                onComplete: () => GameFlowController.Instance.ExitSortingPhase()
-            );
+            GameFlowController.Instance.ExitSortingPhase();
         });
     }
 }

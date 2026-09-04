@@ -91,22 +91,10 @@ public class Timer : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void PauseTimer()
+    public void StopTimer()
     {
         isRunning = false;
-    }
-
-    public void ResumeTimer()
-    {
-        if (timeRemaining > 0)
-            isRunning = true;
-    }
-
-    public void ResetTimer(float newTime = 60f)
-    {
-        timeRemaining = newTime;
-        isRunning = true;
-        UpdateTimerDisplay(timeRemaining);
+        Debug.Log("Finish! Sisa waktu: " + timeRemaining);
     }
 
     public void AddTime(float amount)
