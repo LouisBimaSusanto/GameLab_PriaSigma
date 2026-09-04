@@ -38,6 +38,8 @@ public class GameFlowController : MonoBehaviour
         if (CurrentState == GameState.Sorting) return;
         CurrentState = GameState.Sorting;
 
+        Timer.Instance?.PauseTimer();
+
         IrisTransition.Instance.PlayTransition(
             onMidpoint: () =>
             {
@@ -55,20 +57,19 @@ public class GameFlowController : MonoBehaviour
         if (CurrentState == GameState.Driving) return;
 
         IrisTransition.Instance.PlayTransition(
-            onMidpoint: () =>
-            {
-                // Layar hitam — sembunyikan sorting UI, respawn, naik stage
-                sortingUI.SetActive(false);
-                playerRespawn.Respawn();
-                StageManager.Instance.AdvanceStage();
-                CurrentState = GameState.Driving;
-                OnStateChanged?.Invoke(CurrentState);
-            },
-            onComplete: () =>
-            {
-                // Iris sudah terbuka — resume gameplay
+             onMidpoint: () =>
+             {
+                 sortingUI.SetActive(false);
+                 playerRespawn.Respawn();
+                 StageManager.Instance.AdvanceStage();
+                 CurrentState = GameState.Driving;
+                 OnStateChanged?.Invoke(CurrentState);
+             },
+             onComplete: () =>
+             {
                 ResumeGameplay();
-            }
+                Timer.Instance?.ResetTimer(60f); // reset timer setelah kembali ke drive
+             }
         );
     }
 

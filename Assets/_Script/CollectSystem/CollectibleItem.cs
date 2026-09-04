@@ -6,6 +6,7 @@ public class CollectibleItem : MonoBehaviour, ICollectible
 {
     [Header("Data")]
     [SerializeField] private WasteItemData data;
+    public bool IsCaptured => isCaptured;
 
     [Header("Pull Settings")]
     [SerializeField] protected float pullSpeed = 6f;

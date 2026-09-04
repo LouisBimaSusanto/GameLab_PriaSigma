@@ -14,6 +14,9 @@ public class StageManager : MonoBehaviour
     private const string BestStageKey = "BestStage";
     private const string HighScoreKey = "HighScore";
 
+    public int SessionScore { get; private set; } = 0;
+    public int SessionPerfectScore { get; private set; } = 0;
+
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
@@ -41,6 +44,23 @@ public class StageManager : MonoBehaviour
             PlayerPrefs.SetInt(HighScoreKey, Score);
 
         PlayerPrefs.Save();
+    }
+
+    public void BeginSortingSession()
+    {
+        SessionScore = 0;
+        SessionPerfectScore = 0;
+    }
+
+    public void RegisterItemToSession(int scoreValue)
+    {
+        SessionPerfectScore += scoreValue;
+    }
+
+    public void AddSessionScore(int amount)
+    {
+        SessionScore += amount;
+        AddScore(amount);
     }
 
     public int GetBestStage() => PlayerPrefs.GetInt(BestStageKey, 0);
