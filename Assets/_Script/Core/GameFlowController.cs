@@ -36,12 +36,15 @@ public class GameFlowController : MonoBehaviour
     public void EnterSortingPhase()
     {
         if (CurrentState == GameState.Sorting) return;
+
         CurrentState = GameState.Sorting;
+
+        SortingResultUI.Instance.BeginSession();
+        Timer.Instance?.PauseTimer();
 
         IrisTransition.Instance.PlayTransition(
             onMidpoint: () =>
             {
-                // Layar hitam — pause gameplay, tampilkan sorting UI
                 PauseGameplay();
                 sortingUI.SetActive(true);
                 OnStateChanged?.Invoke(CurrentState);
@@ -49,7 +52,6 @@ public class GameFlowController : MonoBehaviour
         );
     }
 
-    // Dipanggil dari sorting mini-game saat semua item selesai disortir
     public void ExitSortingPhase()
     {
         if (CurrentState == GameState.Driving) return;
@@ -57,7 +59,6 @@ public class GameFlowController : MonoBehaviour
         IrisTransition.Instance.PlayTransition(
             onMidpoint: () =>
             {
-                // Layar hitam — sembunyikan sorting UI, respawn, naik stage
                 sortingUI.SetActive(false);
                 playerRespawn.Respawn();
                 StageManager.Instance.AdvanceStage();
@@ -66,8 +67,8 @@ public class GameFlowController : MonoBehaviour
             },
             onComplete: () =>
             {
-                // Iris sudah terbuka — resume gameplay
                 ResumeGameplay();
+                Timer.Instance?.ResetTimer(60f);
             }
         );
     }
@@ -75,9 +76,6 @@ public class GameFlowController : MonoBehaviour
     private void PauseGameplay()
     {
         playerCar.CanControl = false;
-
-        // Stop physics tanpa freeze Time.timeScale
-        // (biar Timer tetap jalan selama sorting)
         Rigidbody2D rb = playerCar.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -92,7 +90,6 @@ public class GameFlowController : MonoBehaviour
         Rigidbody2D rb = playerCar.GetComponent<Rigidbody2D>();
         if (rb != null)
             rb.bodyType = RigidbodyType2D.Dynamic;
-
         playerCar.CanControl = true;
     }
 

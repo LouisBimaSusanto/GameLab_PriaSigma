@@ -7,12 +7,13 @@ public class Timer : MonoBehaviour
 {
     [Header("Timer Settings")]
     public float timeRemaining = 60f;
+    public float InitialTime { get; private set; }
     private bool isRunning = true;
 
     [Header("UI")]
     public TMP_Text timerText;
-    public static Timer Instance;
 
+    public static Timer Instance;
     public event Action OnTimeUp;
 
     private void Awake()
@@ -21,7 +22,6 @@ public class Timer : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            // Subscribe ke event scene loaded
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
@@ -32,27 +32,21 @@ public class Timer : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Unsubscribe untuk menghindari memory leak
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // Dipanggil otomatis setiap kali scene baru selesai dimuat
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Cari TimerUIBinder di scene baru dan ambil referensi timerText-nya
-        TimerUIBinder binder = UnityEngine.Object.FindFirstObjectByType<TimerUIBinder>(); if (binder != null)
-        {
+        TimerUIBinder binder = UnityEngine.Object.FindFirstObjectByType<TimerUIBinder>();
+        if (binder != null)
             SetTimerText(binder.timerText);
-        }
         else
-        {
-            // Tidak ada timer UI di scene ini (misal: scene menu)
             timerText = null;
-        }
     }
 
     void Start()
     {
+        InitialTime = timeRemaining;
         UpdateTimerDisplay(timeRemaining);
     }
 
@@ -76,11 +70,9 @@ public class Timer : MonoBehaviour
     void UpdateTimerDisplay(float time)
     {
         if (timerText == null) return;
-
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
         timerText.color = time <= 10 ? Color.red : Color.white;
     }
 
@@ -95,6 +87,25 @@ public class Timer : MonoBehaviour
     {
         isRunning = false;
         Debug.Log("Finish! Sisa waktu: " + timeRemaining);
+    }
+
+    public void PauseTimer()
+    {
+        isRunning = false;
+    }
+
+    public void ResumeTimer()
+    {
+        if (timeRemaining > 0)
+            isRunning = true;
+    }
+
+    public void ResetTimer(float newTime = 60f)
+    {
+        timeRemaining = newTime;
+        InitialTime = newTime;
+        isRunning = true;
+        UpdateTimerDisplay(timeRemaining);
     }
 
     public void AddTime(float amount)

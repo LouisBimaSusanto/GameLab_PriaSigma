@@ -54,6 +54,7 @@ public class SortingUIController : MonoBehaviour
         infoPanel.SetActive(false);
         emptyStateUI.SetActive(false);
 
+        StageManager.Instance.BeginSortingSession();
         LoadBatch();
         UpdateInventoryCounter();
     }
@@ -63,7 +64,6 @@ public class SortingUIController : MonoBehaviour
         UnsubscribeDropZones();
         closePanelButton.onClick.RemoveListener(CloseInfoPanel);
     }
-
 
     private void SubscribeDropZones()
     {
@@ -117,12 +117,13 @@ public class SortingUIController : MonoBehaviour
         GameObject go = Instantiate(sortingItemPrefab, itemSpawnArea);
         SortingItemUI itemUI = go.GetComponent<SortingItemUI>();
 
-        // Posisi random dalam spawn area dengan padding
         RectTransform rt = go.GetComponent<RectTransform>();
         rt.anchoredPosition = GetRandomPosition();
 
         itemUI.Setup(data);
         activeItems.Add(itemUI);
+
+        StageManager.Instance.RegisterItemToSession(data.scoreValue);
     }
 
     private Vector2 GetRandomPosition()
@@ -136,11 +137,10 @@ public class SortingUIController : MonoBehaviour
         );
     }
 
-
     private void HandleCorrectDrop(SortingItemUI item)
     {
         AudioManager.Instance?.PlaySFX("correct");
-        StageManager.Instance.AddScore(item.Data.scoreValue);
+        StageManager.Instance.AddSessionScore(item.Data.scoreValue);
         activeItems.Remove(item);
 
         item.PlayCorrectAnimation(() =>
@@ -153,13 +153,12 @@ public class SortingUIController : MonoBehaviour
     private void HandleWrongDrop(SortingItemUI item)
     {
         AudioManager.Instance?.PlaySFX("wrong");
-        Timer.Instance?.AddTime(-5f);
+        StageManager.Instance.AddSessionScore(-1);
         item.PlayWrongAnimation();
     }
 
     private void CheckAllSorted()
     {
-        // Masih ada item aktif di layar
         if (activeItems.Count > 0) return;
 
         if (PlayerInventory.Instance.HasItems())
@@ -168,7 +167,6 @@ public class SortingUIController : MonoBehaviour
             return;
         }
 
-        // Semua selesai!
         ShowEmptyState();
     }
 
@@ -188,9 +186,7 @@ public class SortingUIController : MonoBehaviour
     private void UpdateInventoryCounter()
     {
         int remaining = PlayerInventory.Instance.ItemCount;
-
         inventoryCounter.SetActive(remaining > 0);
-
         if (remaining > 0)
             inventoryCountText.text = remaining.ToString();
     }
@@ -199,11 +195,14 @@ public class SortingUIController : MonoBehaviour
     {
         emptyStateUI.SetActive(true);
 
-        // Delay sebentar sebelum kembali ke drive
         DOVirtual.DelayedCall(1.5f, () =>
         {
             emptyStateUI.SetActive(false);
-            GameFlowController.Instance.ExitSortingPhase();
+            SortingResultUI.Instance.Show(
+                StageManager.Instance.SessionScore,
+                StageManager.Instance.SessionPerfectScore,
+                onComplete: () => GameFlowController.Instance.ExitSortingPhase()
+            );
         });
     }
 }

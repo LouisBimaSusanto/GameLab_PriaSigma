@@ -8,6 +8,9 @@ public class StageManager : MonoBehaviour
     public int CurrentStage { get; private set; } = 1;
     public int Score { get; private set; } = 0;
 
+    public int SessionScore { get; private set; } = 0;
+    public int SessionPerfectScore { get; private set; } = 0;
+
     public event Action<int> OnStageChanged;
     public event Action<int> OnScoreChanged;
 
@@ -26,6 +29,23 @@ public class StageManager : MonoBehaviour
         OnScoreChanged?.Invoke(Score);
     }
 
+    public void BeginSortingSession()
+    {
+        SessionScore = 0;
+        SessionPerfectScore = 0;
+    }
+
+    public void RegisterItemToSession(int scoreValue)
+    {
+        SessionPerfectScore += scoreValue;
+    }
+
+    public void AddSessionScore(int amount)
+    {
+        SessionScore += amount;
+        AddScore(amount);
+    }
+
     public void AdvanceStage()
     {
         CurrentStage++;
@@ -36,10 +56,8 @@ public class StageManager : MonoBehaviour
     {
         if (CurrentStage > PlayerPrefs.GetInt(BestStageKey, 0))
             PlayerPrefs.SetInt(BestStageKey, CurrentStage);
-
         if (Score > PlayerPrefs.GetInt(HighScoreKey, 0))
             PlayerPrefs.SetInt(HighScoreKey, Score);
-
         PlayerPrefs.Save();
     }
 
