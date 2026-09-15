@@ -11,7 +11,7 @@ TagManager:
   - Tilemap
   - Water
   - UI
-  - 
+  - Enviroment
   - 
   - 
   - 
@@ -43,6 +43,18 @@ TagManager:
     locked: 0
   - name: Skidmarks
     uniqueID: 2962756713
+    locked: 0
+  - name: Ground
+    uniqueID: 645390443
+    locked: 0
+  - name: Enviroment
+    uniqueID: 1001200947
+    locked: 0
+  - name: Car
+    uniqueID: 863981919
+    locked: 0
+  - name: Item
+    uniqueID: 671279157
     locked: 0
   m_RenderingLayers:
   - Default

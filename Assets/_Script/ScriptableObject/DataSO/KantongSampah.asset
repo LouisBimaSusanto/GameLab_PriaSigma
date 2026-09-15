@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WasteItemData
   itemName: Plastik
   wasteCategory: 0
-  itemSprite: {fileID: -455014453811102173, guid: 2958e57845f9a974295966b106b448fa, type: 3}
+  itemSprite: {fileID: -3419473813293662983, guid: 54400fbe58693bb4eaabe85957cf8fd3, type: 3}
   scoreValue: 1
-  description: Lorem
+  description: 'Kategori: Sampah Anorganik / Daur Ulang
+
+    Sisa sisa limbah berbahan
+    plastik sintetis. Tidak bisa membusuk secara alami dan butuh puluhan hingga ratusan
+    tahun untuk terurai. Bisa diolah kembali di Tempat Daur Ulang.'

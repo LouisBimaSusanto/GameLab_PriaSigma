@@ -13,90 +13,272 @@ public class CollectibleItem : MonoBehaviour, ICollectible
     [SerializeField] protected float collectDistance = 0.15f;
 
     protected Transform target;
+
     protected bool isCaptured;
+
+    protected bool isCollected;
+
     protected float currentSpeed;
 
-    // Public getter buat sorting mini-game akses kategori & score
+    // =========================================================
+    // PUBLIC
+    // =========================================================
+
     public WasteItemData Data => data;
 
+    public bool IsCaptured => isCaptured;
+
+    public bool IsCollected => isCollected;
+
     private SpriteRenderer spriteRenderer;
+
     private Animator animator;
+
+    // =========================================================
+    // AWAKE
+    // =========================================================
 
     protected virtual void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>(); // null kalau belum ada
+        spriteRenderer =
+            GetComponent<SpriteRenderer>();
+
+        animator =
+            GetComponent<Animator>();
 
         ApplyData();
     }
 
+    // =========================================================
+    // APPLY DATA
+    // =========================================================
+
     private void ApplyData()
     {
-        if (data == null) return;
+        if (data == null)
+        {
+            Debug.LogWarning(
+                $"[CollectibleItem] " +
+                $"{gameObject.name} tidak memiliki " +
+                "WasteItemData."
+            );
+
+            return;
+        }
+
         if (spriteRenderer != null)
-            spriteRenderer.sprite = data.itemSprite;
+        {
+            spriteRenderer.sprite =
+                data.itemSprite;
+        }
     }
+
+    // =========================================================
+    // UPDATE
+    // =========================================================
 
     protected virtual void Update()
     {
-        if (!isCaptured || target == null) return;
+        if (!isCaptured)
+            return;
 
-        currentSpeed += pullAcceleration * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(
+        if (isCollected)
+            return;
+
+        if (target == null)
+            return;
+
+        currentSpeed +=
+            pullAcceleration *
+            Time.deltaTime;
+
+        transform.position =
+            Vector3.MoveTowards(
+                transform.position,
+                target.position,
+                currentSpeed *
+                Time.deltaTime
+            );
+
+        if (Vector3.Distance(
             transform.position,
-            target.position,
-            currentSpeed * Time.deltaTime
-        );
-
-        if (Vector3.Distance(transform.position, target.position) <= collectDistance)
+            target.position
+        ) <= collectDistance)
         {
             Collect();
         }
     }
 
-    public virtual void OnCaptured(Transform capturer)
+    // =========================================================
+    // CAPTURE
+    // =========================================================
+
+    public virtual void OnCaptured(
+        Transform capturer)
     {
-        if (isCaptured) return;
+        if (isCaptured)
+            return;
+
+        if (isCollected)
+            return;
+
+        if (capturer == null)
+        {
+            Debug.LogWarning(
+                $"[CollectibleItem] " +
+                $"{gameObject.name} menerima " +
+                "capturer NULL."
+            );
+
+            return;
+        }
+
         isCaptured = true;
+
         target = capturer;
+
         currentSpeed = pullSpeed;
+
+        Debug.Log(
+            $"[CollectibleItem] " +
+            $"{gameObject.name} captured."
+        );
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // =========================================================
+    // COLLISION
+    // =========================================================
+
+    private void OnCollisionEnter2D(
+        Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("Player")) return;
+        if (isCollected)
+            return;
+
+        if (!collision.gameObject.CompareTag(
+            "Player"))
+        {
+            return;
+        }
+
         Collect();
     }
 
+    // =========================================================
+    // COLLECT
+    // =========================================================
+
     public virtual void Collect()
     {
-        AudioManager.Instance?.PlaySFX("collect");
+        // ==========================================
+        // PREVENT DOUBLE COLLECT
+        // ==========================================
 
-        // Tambahkan ke inventory player
+        if (isCollected)
+            return;
+
+        isCollected = true;
+
+        // ==========================================
+        // CAPTURE STATE
+        // ==========================================
+
+        isCaptured = true;
+
+        Debug.Log(
+            $"[CollectibleItem] " +
+            $"{gameObject.name} COLLECTED."
+        );
+
+        // ==========================================
+        // AUDIO
+        // ==========================================
+
+        AudioManager.Instance?.PlaySFX(
+            "collect"
+        );
+
+        // ==========================================
+        // INVENTORY
+        // ==========================================
+
         if (data != null)
-            PlayerInventory.Instance?.AddItem(data);
+        {
+            if (PlayerInventory.Instance != null)
+            {
+                PlayerInventory.Instance.AddItem(
+                    data
+                );
 
-        // untuk visual toca sampah
+                Debug.Log(
+                    $"[CollectibleItem] " +
+                    $"Item masuk inventory: " +
+                    $"{data.name}"
+                );
+            }
+            else
+            {
+                Debug.LogError(
+                    "[CollectibleItem] " +
+                    "PlayerInventory.Instance NULL!"
+                );
+            }
+        }
+
+        // ==========================================
+        // TRASH BIN VISUAL
+        // ==========================================
+
         TrashBin.Instance?.AddTrash(1);
+
+        // ==========================================
+        // REGISTER TO STAGE
+        // ==========================================
+
+        if (StageManager.Instance != null)
+        {
+            StageManager.Instance
+                .RegisterTrashCollected();
+        }
+        else
+        {
+            Debug.LogError(
+                "[CollectibleItem] " +
+                "StageManager.Instance NULL!"
+            );
+        }
+
+        // ==========================================
+        // DESTROY
+        // ==========================================
 
         if (animator != null)
         {
             PlayDestroyAnimation();
+
             return;
         }
 
         Destroy(gameObject);
     }
 
+    // =========================================================
+    // ANIMATION COMPLETE
+    // =========================================================
+
     public void OnDestroyAnimationComplete()
     {
         Destroy(gameObject);
     }
 
+    // =========================================================
+    // PLAY DESTROY ANIMATION
+    // =========================================================
+
     protected virtual void PlayDestroyAnimation()
     {
-        // TODO: isi trigger name sesuai Animator kamu nanti
-        // Contoh: animator.SetTrigger("Destroy");
-        animator.SetTrigger("Destroy");
+        animator.SetTrigger(
+            "Destroy"
+        );
     }
 }
