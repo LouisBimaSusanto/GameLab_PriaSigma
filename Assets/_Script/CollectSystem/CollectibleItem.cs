@@ -262,10 +262,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
         Destroy(gameObject);
     }
 
-    // =========================================================
-    // ANIMATION COMPLETE
-    // =========================================================
-
     public void OnDestroyAnimationComplete()
     {
         Destroy(gameObject);

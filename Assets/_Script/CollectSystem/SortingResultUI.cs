@@ -12,9 +12,9 @@ public class SortingResultUI : MonoBehaviour
     [SerializeField] private GameObject panel;
 
     [Header("Info")]
-    [SerializeField] private TMP_Text stageTitleText;        // "Stage 1 Selesai!"
-    [SerializeField] private TMP_Text totalTimeText;         // "01:00" — total waktu stage
-    [SerializeField] private TMP_Text timeUsedText;          // "00:40" — waktu yang terpakai user
+    [SerializeField] private TMP_Text stageTitleText;
+    [SerializeField] private TMP_Text totalTimeText;
+    [SerializeField] private TMP_Text timeUsedText;
 
     [Header("Stars")]
     [SerializeField] private Image star1;
@@ -31,9 +31,8 @@ public class SortingResultUI : MonoBehaviour
     [SerializeField] private float starPunchScale = 1.4f;
 
     private Action onCompleteCallback;
-    private float sessionStartTime;
-    private float totalTimeLimit;
-    private float sessionStartTimeRemaining;
+    private float totalTimeLimit;      // snapshot timeRemaining saat masuk checkpoint
+    private float timeAtShowCall;      // snapshot timeRemaining saat Show() dipanggil
 
     private void Awake()
     {
@@ -52,10 +51,11 @@ public class SortingResultUI : MonoBehaviour
         continueButton.onClick.RemoveListener(OnContinueClicked);
     }
 
-    public void BeginSession()
+    // Dipanggil dari CheckPoint saat player masuk — snapshot waktu saat itu
+    public void BeginSession(float snapshotTimeRemaining)
     {
-        sessionStartTimeRemaining = Timer.Instance.timeRemaining;
-        totalTimeLimit = Timer.Instance.InitialTime;
+        totalTimeLimit = snapshotTimeRemaining;
+        Debug.Log($"[ResultUI] BeginSession — totalTimeLimit snapshot: {totalTimeLimit}");
     }
 
     public void Show(int sessionScore, int perfectScore, Action onComplete)
@@ -65,33 +65,36 @@ public class SortingResultUI : MonoBehaviour
         int currentStage = StageManager.Instance.CurrentStage;
         stageTitleText.text = "Stage " + currentStage + " Selesai!";
 
-        // Total waktu stage — dari InitialTime Timer
-        totalTimeText.text = FormatTime(totalTimeLimit);
+        // Ambil sisa waktu saat Show() dipanggil (setelah sorting selesai)
+        float currentRemaining = Timer.Instance.timeRemaining;
+        float timeUsed = totalTimeLimit - currentRemaining;
+        timeUsed = Mathf.Clamp(timeUsed, 0f, totalTimeLimit);
 
-        // Waktu terpakai = waktu awal - sisa waktu saat masuk sorting
-        float timeUsed = totalTimeLimit - sessionStartTimeRemaining;
-        timeUsed = Mathf.Max(0f, timeUsed);
+        Debug.Log($"[ResultUI] Show — totalTimeLimit: {totalTimeLimit} | currentRemaining: {currentRemaining} | timeUsed: {timeUsed}");
+
+        totalTimeText.text = FormatTime(totalTimeLimit);
         timeUsedText.text = FormatTime(timeUsed);
 
-        int stars = CalculateStars(sessionScore, perfectScore);
+        Timer.Instance?.PauseTimer();
 
+        int stars = CalculateStars(sessionScore, perfectScore);
         panel.SetActive(true);
         AnimateStars(stars);
     }
 
     private string FormatTime(float time)
     {
-        int minutes = Mathf.FloorToInt(time / 60f);
-        int seconds = Mathf.FloorToInt(time % 60f);
+        time = Mathf.Max(0f, time);
+        int totalSeconds = Mathf.FloorToInt(time);
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
         return string.Format("{0:00}:{1:02}", minutes, seconds);
     }
 
     private int CalculateStars(int score, int perfect)
     {
         if (perfect <= 0) return 1;
-
         float ratio = (float)score / perfect;
-
         if (ratio >= 1f) return 3;
         if (ratio >= 0.7f) return 2;
         return 1;
