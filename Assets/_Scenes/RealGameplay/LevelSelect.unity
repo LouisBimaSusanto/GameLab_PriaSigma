@@ -1284,6 +1284,18 @@ PrefabInstance:
       propertyPath: canvasGroup
       value: 
       objectReference: {fileID: 149382521}
+    - target: {fileID: 6189885975879978109, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5936275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189885975879978109, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.80870265
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189885975879978109, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.91194963
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
