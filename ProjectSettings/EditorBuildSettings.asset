@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/SampleScene 1.unity
     guid: 6f6c6b56b66dbdf43a83f5e2d696d432
   - enabled: 1
+    path: Assets/_Scenes/IGDX/Loading.unity
+    guid: 3022a52d9259a314daa40c9437a6bad6
+  - enabled: 1
     path: Assets/_Scenes/IGDX/Stage1.unity
     guid: 74b76ed95f40d304bbcb27531e3136d8
   m_configObjects:

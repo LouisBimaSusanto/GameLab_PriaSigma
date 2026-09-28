@@ -2,6 +2,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class SceneTransition : MonoBehaviour
 {
     public static SceneTransition Instance { get; private set; }
@@ -17,8 +18,14 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Ease closeEase = Ease.InOutSine;
     [SerializeField] private Ease openEase = Ease.InOutSine;
 
+    [Header("Loading Screen")]
+    [SerializeField] private string loadingSceneName = "Loading"; // nama scene loading
+
     private bool isTransitioning;
     private Tween activeTween;
+
+    // BARU: dipakai LoadingScreen untuk menunggu transisi selesai
+    public bool IsTransitioning => isTransitioning;
 
     private void Awake()
     {
@@ -39,11 +46,18 @@ public class SceneTransition : MonoBehaviour
         Open();
     }
 
-    
     public void LoadScene(string sceneName)
     {
         if (isTransitioning) return;
         StartCoroutine(TransitionRoutine(sceneName));
+    }
+
+    // BARU: transisi ke scene Loading dulu, lalu LoadingScreen yang lanjut ke scene tujuan
+    public void LoadSceneWithLoading(string targetScene)
+    {
+        if (isTransitioning) return;
+        LoadingData.TargetScene = targetScene;
+        StartCoroutine(TransitionRoutine(loadingSceneName));
     }
 
     private IEnumerator TransitionRoutine(string sceneName)

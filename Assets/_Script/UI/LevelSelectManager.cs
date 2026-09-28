@@ -1,15 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelSelectManager : MonoBehaviour
 {
+    // Tombol Level: transisi -> Loading screen -> transisi -> scene level
     public void LoadLevel(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneTransition.Instance.LoadSceneWithLoading(sceneName);
     }
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("UIMenu"); // sesuaikan nama scene menu kamu
+        SceneTransition.Instance.LoadScene("UIMenu"); // sesuaikan nama scene menu kamu
     }
 }
