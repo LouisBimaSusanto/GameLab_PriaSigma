@@ -149,10 +149,6 @@ public class IrisTransition : MonoBehaviour
             )
         );
 
-        // =====================================================
-        // MIDPOINT
-        // =====================================================
-
         sequence.AppendCallback(() =>
         {
             Debug.Log(
@@ -163,10 +159,6 @@ public class IrisTransition : MonoBehaviour
             onMidpoint?.Invoke();
         });
 
-        // =====================================================
-        // OPEN
-        // =====================================================
-
         sequence.Append(
             BuildRadiusTween(
                 ClosedRadius,
@@ -175,10 +167,6 @@ public class IrisTransition : MonoBehaviour
                 openEase
             )
         );
-
-        // =====================================================
-        // COMPLETE
-        // =====================================================
 
         sequence.OnComplete(() =>
         {
@@ -199,10 +187,6 @@ public class IrisTransition : MonoBehaviour
             isPlaying = false;
         });
     }
-
-    // =========================================================
-    // CLOSE ONLY
-    // =========================================================
 
     public void CloseOnly(
         Action onComplete = null)
@@ -258,10 +242,6 @@ public class IrisTransition : MonoBehaviour
             isPlaying = false;
         });
     }
-
-    // =========================================================
-    // BUILD TWEEN
-    // =========================================================
 
     private Tweener BuildRadiusTween(
         float from,

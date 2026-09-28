@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            InitialTime = timeRemaining;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -46,7 +47,6 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        InitialTime = timeRemaining;
         UpdateTimerDisplay(timeRemaining);
     }
 
