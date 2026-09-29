@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41242ee14789eb54a9861799dd4fbae7, type: 3}
+  m_Name: KantongSampah 5
+  m_EditorClassIdentifier: Assembly-CSharp::WasteItemData
+  itemName: Sayuran Bekas
+  wasteCategory: 1
+  itemSprite: {fileID: -8542059514010371876, guid: b362cb4c5860ce04ebb59c1891f1978a, type: 3}
+  scoreValue: 1
+  description: 'Kategori: Sampah Anorganik / Daur Ulang
+
+    Sisa sisa limbah berbahan
+    plastik sintetis. Tidak bisa membusuk secara alami dan butuh puluhan hingga ratusan
+    tahun untuk terurai. Bisa diolah kembali di Tempat Daur Ulang.'

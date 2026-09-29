@@ -6,7 +6,7 @@ public class SortingDropZone : MonoBehaviour, IDropHandler
 {
     [SerializeField] private WasteCategory acceptedCategory;
 
-    public event Action<SortingItemUI> OnCorrectDrop;
+    public event Action<SortingItemUI, Transform> OnCorrectDrop;
     public event Action<SortingItemUI> OnWrongDrop;
 
     public void OnDrop(PointerEventData eventData)
@@ -17,7 +17,7 @@ public class SortingDropZone : MonoBehaviour, IDropHandler
         if (item == null) return;
 
         if (item.Data.wasteCategory == acceptedCategory)
-            OnCorrectDrop?.Invoke(item);
+            OnCorrectDrop?.Invoke(item, this.transform);
         else
             OnWrongDrop?.Invoke(item);
     }

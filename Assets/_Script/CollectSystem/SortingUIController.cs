@@ -137,15 +137,14 @@ public class SortingUIController : MonoBehaviour
         );
     }
 
-    private void HandleCorrectDrop(SortingItemUI item)
+    private void HandleCorrectDrop(SortingItemUI item, Transform dropZoneTransform)
     {
         AudioManager.Instance?.PlaySFX("correct");
         StageManager.Instance.AddSessionScore(item.Data.scoreValue);
         activeItems.Remove(item);
 
-        item.PlayCorrectAnimation(() =>
+        item.PlayCorrectAnimation(dropZoneTransform, () =>
         {
-            Destroy(item.gameObject);
             CheckAllSorted();
         });
     }

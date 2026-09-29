@@ -5,8 +5,7 @@ using DG.Tweening;
 using TMPro;
 using System;
 
-public class SortingItemUI : MonoBehaviour,
-    IBeginDragHandler, IDragHandler, IEndDragHandler
+public class SortingItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("References")]
     [SerializeField] private Image itemImage;
@@ -18,6 +17,8 @@ public class SortingItemUI : MonoBehaviour,
     private Canvas canvas;
     private Vector2 originalPosition;
     private Transform originalParent;
+
+    private bool isSorted = false;
 
     private void Awake()
     {
@@ -31,13 +32,14 @@ public class SortingItemUI : MonoBehaviour,
         Data = data;
         itemImage.sprite = data.itemSprite;
 
-        // Animasi muncul
         transform.localScale = Vector3.zero;
         transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (isSorted) return;
+
         originalPosition = rectTransform.anchoredPosition;
         originalParent = transform.parent;
 
@@ -50,30 +52,43 @@ public class SortingItemUI : MonoBehaviour,
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (isSorted) return;
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Kembalikan ke parent & posisi asal kalau tidak di-drop ke zona valid
+        if (isSorted) return;
+
         transform.SetParent(originalParent);
         rectTransform.anchoredPosition = originalPosition;
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }
 
-    public void PlayCorrectAnimation(Action onComplete)
+    public void PlayCorrectAnimation(Transform dropZoneTransform, Action onComplete)
     {
-        // Animasi benar: scale up lalu hilang
+        isSorted = true;
+        canvasGroup.blocksRaycasts = false;
+
+        // Pindahkan parent ke tong sampah
+        transform.SetParent(dropZoneTransform);
+        transform.SetAsLastSibling();
+
+        // Buat posisi acak di dalam kotak agar menumpuk natural
+        float randomX = UnityEngine.Random.Range(-40f, 40f);
+        float randomY = UnityEngine.Random.Range(-20f, 40f);
+        float randomRot = UnityEngine.Random.Range(-30f, 30f);
+
         Sequence seq = DOTween.Sequence();
-        seq.Append(transform.DOScale(1.2f, 0.15f));
-        seq.Append(transform.DOScale(0f, 0.2f).SetEase(Ease.InBack));
+        seq.Append(rectTransform.DOAnchorPos(new Vector2(randomX, randomY), 0.25f).SetEase(Ease.OutQuad));
+        seq.Join(transform.DORotate(new Vector3(0, 0, randomRot), 0.25f));
+        seq.Join(transform.DOScale(0.8f, 0.25f));
         seq.OnComplete(() => onComplete?.Invoke());
     }
 
     public void PlayWrongAnimation()
     {
-        // Shake lalu balik ke posisi asal
         transform.SetParent(originalParent);
         rectTransform.anchoredPosition = originalPosition;
         canvasGroup.alpha = 1f;

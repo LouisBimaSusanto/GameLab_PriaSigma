@@ -10,6 +10,10 @@ public class CarController : MonoBehaviour
 
     public bool CanControl = true;
 
+    [Header("Audio Settings")]
+    public string engineSFXName = "mesin"; 
+    private bool isEnginePlaying = false;
+
     private void Awake()
     {
         input = GetComponent<InputHandler>();
@@ -21,7 +25,10 @@ public class CarController : MonoBehaviour
 
     private void Update()
     {
-        if(!CanControl) return;
+        HandleEngineSound();
+
+        if (!CanControl) return;
+
         drift.HandelDrift(input.Horizontal);
 
         if (drift.isDrifting)
@@ -44,5 +51,30 @@ public class CarController : MonoBehaviour
         if (!CanControl) return;
         movement.MoveForward();
         steering.Steer(input.Horizontal);
+    }
+
+    private void HandleEngineSound()
+    {
+        if (AudioManager.Instance == null) return;
+
+        if (CanControl && !isEnginePlaying)
+        {
+            AudioManager.Instance.PlayEngineSFX(engineSFXName);
+            isEnginePlaying = true;
+        }
+        else if (!CanControl && isEnginePlaying)
+        {
+            AudioManager.Instance.StopEngineSFX();
+            isEnginePlaying = false;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (AudioManager.Instance != null && isEnginePlaying)
+        {
+            AudioManager.Instance.StopEngineSFX();
+            isEnginePlaying = false;
+        }
     }
 }

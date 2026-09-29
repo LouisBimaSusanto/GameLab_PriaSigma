@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3674286667801659128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8088204974703658160}
+  - component: {fileID: 2081379024217160723}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8088204974703658160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3674286667801659128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.2864, y: -4.30285, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081379024217160723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3674286667801659128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42683795e8e085043aea2d48ca04f922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  bgmList:
+  - name: MainMenu_BGM
+    clip: {fileID: 8300000, guid: 525c06444d4c5f94ebd3e2cf1391e2aa, type: 3}
+    volume: 1
+    pitch: 1
+  - name: Gameplay_BGM
+    clip: {fileID: 8300000, guid: c1f9b90904db08f4fbb6aef9d6460b3d, type: 3}
+    volume: 1
+    pitch: 1
+  sfxList:
+  - name: jump
+    clip: {fileID: 8300000, guid: 8498981b24bdc1f49bebad6017c1d142, type: 3}
+    volume: 1
+    pitch: 1
+  - name: speed up
+    clip: {fileID: 8300000, guid: 3d02590ce4b0f3c429017df8a930e49b, type: 3}
+    volume: 1
+    pitch: 1
+  - name: mesin
+    clip: {fileID: 8300000, guid: fd29dcb3d96e9b841806ded2bfe3d735, type: 3}
+    volume: 1
+    pitch: 1
+  - name: crash
+    clip: {fileID: 8300000, guid: 58405585e7a786f4b8fd956a27b58f9c, type: 3}
+    volume: 1
+    pitch: 1
+  - name: fall
+    clip: {fileID: 8300000, guid: 23af47e6999db7346960bd36ff641c19, type: 3}
+    volume: 1
+    pitch: 1
+  - name: button_click
+    clip: {fileID: 8300000, guid: 07bd5b08620b9374895f77e45dbe08da, type: 3}
+    volume: 1
+    pitch: 1

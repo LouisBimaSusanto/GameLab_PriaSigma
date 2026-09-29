@@ -31,8 +31,8 @@ public class SortingResultUI : MonoBehaviour
     [SerializeField] private float starPunchScale = 1.4f;
 
     private Action onCompleteCallback;
-    private float totalTimeLimit;      // snapshot timeRemaining saat masuk checkpoint
-    private float timeAtShowCall;      // snapshot timeRemaining saat Show() dipanggil
+    private float totalTimeLimit;    
+    private float timeAtShowCall;      
 
     private void Awake()
     {
