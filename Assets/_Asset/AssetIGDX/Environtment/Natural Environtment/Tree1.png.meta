@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1590138b6248c1e478d58644df4005e5
+guid: b9be527e96be2ab408cca07e02becf3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1306112531949010859
-    second: Rumah_1_0
+      213: 6215267202064938543
+    second: Tree1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rumah_1_0
+      name: Tree1_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 108
-        width: 906
-        height: 872
+        x: 23
+        y: 5
+        width: 338
+        height: 503
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5504e708291cfdde0800000000000000
-      internalID: -1306112531949010859
+      spriteID: f2677332790114650800000000000000
+      internalID: 6215267202064938543
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rumah_1_0: -1306112531949010859
+      Tree1_0: 6215267202064938543
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
