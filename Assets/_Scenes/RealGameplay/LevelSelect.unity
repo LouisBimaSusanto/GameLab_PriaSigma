@@ -413,7 +413,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1862550937819298967, guid: ce51ea3e6cb34154bb191d6a2723d7cf, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -237965286477486841, guid: a791928454cef214bbad71f48e0663f3, type: 3}
+  m_Sprite: {fileID: -5000488056336954749, guid: 2d4233c01f99bf544bf4a99824368aa9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -743,7 +743,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -1488647476474017452, guid: 68550492e1ce0954c8028616346f8384, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1602152497309830073, guid: d262eb9701e9db34ea9b040017c44ac0, type: 3}
+  m_Sprite: {fileID: 3684491434484709428, guid: 7f99a69269bd5b349a78c63602824478, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2246650992860625620, guid: 19d7e07f6e047eb4ca5fcb7c518a0a02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 503a57f7aad42724a9b454f241c14d28, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -981,8 +981,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000017166, y: 117}
-  m_SizeDelta: {x: 226.4186, y: 55.1022}
+  m_AnchoredPosition: {x: 0.000026226, y: 121}
+  m_SizeDelta: {x: 299.5667, y: 72.9035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642791899
 MonoBehaviour:
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 9084454579444580983, guid: c27ab43ca89d3d1428a3942309ec95a6, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8791150197233133116, guid: af4886857cf2029468cc04fb93704e30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 975f249f5368cd546854c78ea3e4ffba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1267,6 +1267,10 @@ PrefabInstance:
     - target: {fileID: 2695616912609769959, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
       propertyPath: m_Name
       value: TransitionCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695616912609769959, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5126059503640776034, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
       propertyPath: circle
