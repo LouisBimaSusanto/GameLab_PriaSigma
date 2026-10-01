@@ -1270,7 +1270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2695616912609769959, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5126059503640776034, guid: eac5a412d62a95446a1df81d20582ee7, type: 3}
       propertyPath: circle
