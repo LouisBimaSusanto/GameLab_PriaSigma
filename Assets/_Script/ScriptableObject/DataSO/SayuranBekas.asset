@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41242ee14789eb54a9861799dd4fbae7, type: 3}
-  m_Name: KantongSampah 5
+  m_Name: SayuranBekas
   m_EditorClassIdentifier: Assembly-CSharp::WasteItemData
   itemName: Sayuran Bekas
   wasteCategory: 1

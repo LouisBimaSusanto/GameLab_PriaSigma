@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 7db7dfade0a5a1d44beebef15f234886
+guid: c94f512683a73624c816284a90a67f7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2780173295609163797
-    second: Sampah organik_1_0
+      213: 6199648412255339119
+    second: JoystickSplitted_0
+  - first:
+      213: -8703962981973262027
+    second: JoystickSplitted_1
+  - first:
+      213: 2562885955345252504
+    second: JoystickSplitted_2
+  - first:
+      213: -2636724554023837968
+    second: JoystickSplitted_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sampah organik_1_0
+      name: JoystickSplitted_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 77
-        width: 422
-        height: 340
+        x: 27
+        y: 183
+        width: 140
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bef403d1e17da69d0800000000000000
-      internalID: -2780173295609163797
+      spriteID: f624bc04263990650800000000000000
+      internalID: 6199648412255339119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoystickSplitted_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 173
+        width: 151
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531855198cf453780800000000000000
+      internalID: -8703962981973262027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoystickSplitted_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 28
+        width: 140
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89001389233319320800000000000000
+      internalID: 2562885955345252504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JoystickSplitted_3
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 27
+        width: 149
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fedbd2fcf8786bd0800000000000000
+      internalID: -2636724554023837968
       vertices: []
       indices: 
       edges: []
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sampah organik_1_0: -2780173295609163797
+      JoystickSplitted_0: 6199648412255339119
+      JoystickSplitted_1: -8703962981973262027
+      JoystickSplitted_2: 2562885955345252504
+      JoystickSplitted_3: -2636724554023837968
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
