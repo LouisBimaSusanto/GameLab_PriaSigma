@@ -12,8 +12,7 @@ public class SortingResultUI : MonoBehaviour
     [SerializeField] private GameObject panel;
 
     [Header("Info")]
-    [SerializeField] private TMP_Text stageTitleText;
-    [SerializeField] private TMP_Text totalTimeText;
+    [Tooltip("Teks untuk menampilkan Sisa Waktu")]
     [SerializeField] private TMP_Text timeUsedText;
 
     [Header("Stars")]
@@ -31,8 +30,6 @@ public class SortingResultUI : MonoBehaviour
     [SerializeField] private float starPunchScale = 1.4f;
 
     private Action onCompleteCallback;
-    private float totalTimeLimit;    
-    private float timeAtShowCall;      
 
     private void Awake()
     {
@@ -51,53 +48,50 @@ public class SortingResultUI : MonoBehaviour
         continueButton.onClick.RemoveListener(OnContinueClicked);
     }
 
-    // Dipanggil dari CheckPoint saat player masuk — snapshot waktu saat itu
     public void BeginSession(float snapshotTimeRemaining)
     {
-        totalTimeLimit = snapshotTimeRemaining;
-        Debug.Log($"[ResultUI] BeginSession — totalTimeLimit snapshot: {totalTimeLimit}");
     }
 
     public void Show(int sessionScore, int perfectScore, Action onComplete)
     {
         onCompleteCallback = onComplete;
 
-        int currentStage = StageManager.Instance.CurrentStage;
-        stageTitleText.text = "Stage " + currentStage + " Selesai!";
-
-        // Ambil sisa waktu saat Show() dipanggil (setelah sorting selesai)
-        float currentRemaining = Timer.Instance.timeRemaining;
-        float timeUsed = totalTimeLimit - currentRemaining;
-        timeUsed = Mathf.Clamp(timeUsed, 0f, totalTimeLimit);
-
-        Debug.Log($"[ResultUI] Show — totalTimeLimit: {totalTimeLimit} | currentRemaining: {currentRemaining} | timeUsed: {timeUsed}");
-
-        totalTimeText.text = FormatTime(totalTimeLimit);
-        timeUsedText.text = FormatTime(timeUsed);
-
         Timer.Instance?.PauseTimer();
 
-        int stars = CalculateStars(sessionScore, perfectScore);
+        float currentRemaining = Timer.Instance != null ? Timer.Instance.timeRemaining : 0f;
+
+        Debug.Log($"[ResultUI] Sisa Waktu yang ditampilkan: {currentRemaining} detik");
+
+        if (timeUsedText != null)
+        {
+            timeUsedText.text = FormatTime(currentRemaining);
+        }
+
+        int stars = CalculateStarsBasedOnTime(currentRemaining);
+
         panel.SetActive(true);
         AnimateStars(stars);
+    }
+
+    private int CalculateStarsBasedOnTime(float remainingTime)
+    {
+        if (remainingTime >= 15f) return 3; // Bintang 3: Sisa waktu >= 15 detik
+        if (remainingTime >= 5f) return 2;  // Bintang 2: Sisa waktu antara 5 - 14.99 detik
+        if (remainingTime > 0f) return 1;   // Bintang 1: Sisa waktu di bawah 5 detik
+
+        return 0;
     }
 
     private string FormatTime(float time)
     {
         time = Mathf.Max(0f, time);
+
         int totalSeconds = Mathf.FloorToInt(time);
+
         int minutes = totalSeconds / 60;
         int seconds = totalSeconds % 60;
-        return string.Format("{0:00}:{1:02}", minutes, seconds);
-    }
 
-    private int CalculateStars(int score, int perfect)
-    {
-        if (perfect <= 0) return 1;
-        float ratio = (float)score / perfect;
-        if (ratio >= 1f) return 3;
-        if (ratio >= 0.7f) return 2;
-        return 1;
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private void AnimateStars(int starCount)
