@@ -24,8 +24,7 @@ public class GameFlowController : MonoBehaviour
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
 
-        if (sortingUI != null)
-            sortingUI.SetActive(false);
+        if (sortingUI != null) sortingUI.SetActive(false);
     }
 
     private void Start()
@@ -74,7 +73,6 @@ public class GameFlowController : MonoBehaviour
         if (CurrentState == GameState.Sorting) return;
 
         CurrentState = GameState.Sorting;
-        // BeginSession sudah dipanggil dari CheckPoint sebelum method ini
 
         IrisTransition.Instance.PlayTransition(
             onMidpoint: () =>

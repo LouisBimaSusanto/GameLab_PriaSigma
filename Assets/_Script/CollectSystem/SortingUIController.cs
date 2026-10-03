@@ -41,6 +41,8 @@ public class SortingUIController : MonoBehaviour
     private List<SortingItemUI> activeItems = new List<SortingItemUI>();
     private int remainingInQueue => PlayerInventory.Instance.ItemCount;
 
+    private Tween emptyStateTween;
+
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
@@ -49,6 +51,9 @@ public class SortingUIController : MonoBehaviour
 
     private void OnEnable()
     {
+        if (GameFlowController.Instance != null && GameFlowController.Instance.CurrentState != GameState.Sorting)
+            return;
+
         SubscribeDropZones();
         closePanelButton.onClick.AddListener(CloseInfoPanel);
         infoPanel.SetActive(false);
@@ -63,6 +68,8 @@ public class SortingUIController : MonoBehaviour
     {
         UnsubscribeDropZones();
         closePanelButton.onClick.RemoveListener(CloseInfoPanel);
+
+        emptyStateTween?.Kill();
     }
 
     private void SubscribeDropZones()
@@ -194,7 +201,7 @@ public class SortingUIController : MonoBehaviour
     {
         emptyStateUI.SetActive(true);
 
-        DOVirtual.DelayedCall(1.5f, () =>
+        emptyStateTween = DOVirtual.DelayedCall(1.5f, () =>
         {
             emptyStateUI.SetActive(false);
             SortingResultUI.Instance.Show(

@@ -121,7 +121,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.74165, y: 1.01062, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4117719738404265021}
@@ -172,8 +172,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 863981919
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5664697094758185015, guid: 88cfa3731ab4a9b4da821d77a2e54530, type: 3}
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarController
   CanControl: 1
+  engineSFXName: mesin
 --- !u!114 &3851336669130065353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d4f51fe8fbdab46a4f2ddb2793309e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarMovement
-  speed: 4
+  speed: 8
   knockBackDuration: 1
 --- !u!114 &4298099115846648623
 MonoBehaviour:
@@ -298,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48d74aae7e868144a667b55400e5980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputHandler
+  steeringJoystick: {fileID: 0}
 --- !u!114 &123248245707456786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +313,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarSteering
   turnSpeed: 200
+  carSpriteRenderer: {fileID: 7958011301883019445}
+  leftSprite: {fileID: -7444787721424756708, guid: b4ca8c8c13d94d74ea2f49781af3fa67, type: 3}
+  rightSprite: {fileID: -2153142337737887428, guid: 422de22774f49614995977e11bf861ce, type: 3}
 --- !u!114 &8392080006382448983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,4 +374,7 @@ MonoBehaviour:
   - {fileID: -8877331073009045872, guid: 687bccd250282b74f8f66904c1d7c395, type: 3}
   - {fileID: -7067812437537609462, guid: 405e58532564158488556baaffda4057, type: 3}
   - {fileID: 2470371340602284416, guid: aa126da2b8e0fe44ba3a7f2bf8fb92ca, type: 3}
-  maxTrashCount: 3
+  - {fileID: -178042758008197173, guid: 50fe637d537d01249914e0dd516bb1ad, type: 3}
+  - {fileID: 6083448743773781034, guid: a31f721362832884c890e9eb677d8b17, type: 3}
+  - {fileID: 8008516094119768976, guid: c4679168a295de6469c37fca032ab173, type: 3}
+  maxTrashCount: 6

@@ -11,7 +11,7 @@ public class CarController : MonoBehaviour
     public bool CanControl = true;
 
     [Header("Audio Settings")]
-    public string engineSFXName = "mesin"; 
+    public string engineSFXName = "mesin";
     private bool isEnginePlaying = false;
 
     private void Awake()
@@ -29,7 +29,7 @@ public class CarController : MonoBehaviour
 
         if (!CanControl) return;
 
-        drift.HandelDrift(input.Horizontal);
+        drift.HandelDrift(input.DriftHolding);
 
         if (drift.isDrifting)
         {
@@ -40,17 +40,21 @@ public class CarController : MonoBehaviour
             steering.turnSpeed = 200f;
         }
 
+/*        // Memanggil fungsi lompat jika tombol ditekan
         if (input.JumpPressed)
         {
             jump.Jump();
-        }
+        }*/
     }
 
     private void FixedUpdate()
     {
         if (!CanControl) return;
+
         movement.MoveForward();
         steering.Steer(input.Horizontal);
+
+        drift.ApplyDriftPhysics();
     }
 
     private void HandleEngineSound()

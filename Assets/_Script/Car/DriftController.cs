@@ -2,27 +2,30 @@ using UnityEngine;
 
 public class DriftController : MonoBehaviour
 {
-    public float driftThershold = 2f;
-    public bool isDrifting {  get; private set; }
+    [Header("Drift Settings")]
+    [Range(0f, 1f)] public float lurusFriction = 0.1f;
+    [Range(0f, 1f)] public float belokFriction = 0.95f;
 
-    float holdTimer = 0f;
+    public bool isDrifting { get; private set; }
+    private Rigidbody2D rb;
 
-    public void HandelDrift(float input)
+    private void Awake()
     {
-        if (Mathf.Abs(input) > 0.1f)
-        {
-            holdTimer += Time.deltaTime;
-
-            if (holdTimer >= driftThershold)
-            {
-                isDrifting = true;
-            }
-        }
-        else
-        {
-            holdTimer = 0f;
-            isDrifting = false;
-        }
+        rb = GetComponent<Rigidbody2D>();
     }
 
+    public void HandelDrift(bool isDriftButtonHeld)
+    {
+        isDrifting = isDriftButtonHeld;
+    }
+
+    public void ApplyDriftPhysics()
+    {
+        float driftFactor = isDrifting ? belokFriction : lurusFriction;
+
+        Vector2 forwardVelocity = transform.up * Vector2.Dot(rb.linearVelocity, transform.up);
+        Vector2 rightVelocity = transform.right * Vector2.Dot(rb.linearVelocity, transform.right);
+
+        rb.linearVelocity = forwardVelocity + rightVelocity * driftFactor;
+    }
 }

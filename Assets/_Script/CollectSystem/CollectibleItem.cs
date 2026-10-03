@@ -20,10 +20,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
 
     protected float currentSpeed;
 
-    // =========================================================
-    // PUBLIC
-    // =========================================================
-
     public WasteItemData Data => data;
 
     public bool IsCaptured => isCaptured;
@@ -33,10 +29,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
     private SpriteRenderer spriteRenderer;
 
     private Animator animator;
-
-    // =========================================================
-    // AWAKE
-    // =========================================================
 
     protected virtual void Awake()
     {
@@ -48,10 +40,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
 
         ApplyData();
     }
-
-    // =========================================================
-    // APPLY DATA
-    // =========================================================
 
     private void ApplyData()
     {
@@ -72,10 +60,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
                 data.itemSprite;
         }
     }
-
-    // =========================================================
-    // UPDATE
-    // =========================================================
 
     protected virtual void Update()
     {
@@ -109,10 +93,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
         }
     }
 
-    // =========================================================
-    // CAPTURE
-    // =========================================================
-
     public virtual void OnCaptured(
         Transform capturer)
     {
@@ -145,10 +125,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
         );
     }
 
-    // =========================================================
-    // COLLISION
-    // =========================================================
-
     private void OnCollisionEnter2D(
         Collision2D collision)
     {
@@ -164,24 +140,12 @@ public class CollectibleItem : MonoBehaviour, ICollectible
         Collect();
     }
 
-    // =========================================================
-    // COLLECT
-    // =========================================================
-
     public virtual void Collect()
     {
-        // ==========================================
-        // PREVENT DOUBLE COLLECT
-        // ==========================================
-
         if (isCollected)
             return;
 
         isCollected = true;
-
-        // ==========================================
-        // CAPTURE STATE
-        // ==========================================
 
         isCaptured = true;
 
@@ -190,17 +154,7 @@ public class CollectibleItem : MonoBehaviour, ICollectible
             $"{gameObject.name} COLLECTED."
         );
 
-        // ==========================================
-        // AUDIO
-        // ==========================================
-
-        AudioManager.Instance?.PlaySFX(
-            "collect"
-        );
-
-        // ==========================================
-        // INVENTORY
-        // ==========================================
+        AudioManager.Instance?.PlaySFX("collect");
 
         if (data != null)
         {
@@ -225,15 +179,7 @@ public class CollectibleItem : MonoBehaviour, ICollectible
             }
         }
 
-        // ==========================================
-        // TRASH BIN VISUAL
-        // ==========================================
-
         TrashBin.Instance?.AddTrash(1);
-
-        // ==========================================
-        // REGISTER TO STAGE
-        // ==========================================
 
         if (StageManager.Instance != null)
         {
@@ -247,10 +193,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
                 "StageManager.Instance NULL!"
             );
         }
-
-        // ==========================================
-        // DESTROY
-        // ==========================================
 
         if (animator != null)
         {
@@ -266,10 +208,6 @@ public class CollectibleItem : MonoBehaviour, ICollectible
     {
         Destroy(gameObject);
     }
-
-    // =========================================================
-    // PLAY DESTROY ANIMATION
-    // =========================================================
 
     protected virtual void PlayDestroyAnimation()
     {

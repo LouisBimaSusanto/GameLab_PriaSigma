@@ -50,7 +50,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
   - name: Gameplay_BGM
-    clip: {fileID: 8300000, guid: c1f9b90904db08f4fbb6aef9d6460b3d, type: 3}
+    clip: {fileID: 8300000, guid: b81d44809d11e4b4f91ef8278f47475d, type: 3}
     volume: 1
     pitch: 1
   sfxList:
