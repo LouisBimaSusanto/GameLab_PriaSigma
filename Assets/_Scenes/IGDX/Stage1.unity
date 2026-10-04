@@ -224,8 +224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 363, y: -33}
-  m_SizeDelta: {x: 275.6275, y: 89.605}
+  m_AnchoredPosition: {x: 390, y: -33}
+  m_SizeDelta: {x: 347.9662, y: 132.7023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5372448
 MonoBehaviour:
@@ -256,7 +256,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 4756542229927714487, guid: d57515c77e6494b4b8a4c0f18ac2c6d9, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1095236916}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: BackToMainMenu
         m_Mode: 1
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8695433644106655887, guid: 3e3444c51196ae241aefe199948d24a5, type: 3}
+  m_Sprite: {fileID: -2906136463322685725, guid: 5a7060e1ac4d2ec4da7da71f6408ccbe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -473,8 +473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000029564, y: 108}
-  m_SizeDelta: {x: 208.2426, y: 104.1178}
+  m_AnchoredPosition: {x: -0.000022888, y: 196.79614}
+  m_SizeDelta: {x: 782.33, y: 317.0894}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28650213
 MonoBehaviour:
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 755563520367761628, guid: f4d171353cf51e94bb81bfebc11a9679, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0681ec1cb48e6c4f930457ea0874d14, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -600,6 +600,10 @@ PrefabInstance:
     - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_Name
       value: Obstacle_City (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1062,6 +1066,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 442351268684932329, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 442351268684932329, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 863981919
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595921798857088042, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595921798857088042, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 3627901717261063467, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
       propertyPath: m_Name
       value: Car
@@ -1114,6 +1134,10 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 997207557}
+    - target: {fileID: 7958857784431605361, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8392080006382448983, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
       propertyPath: belokFriction
       value: 0.98
@@ -1121,7 +1145,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3627901717261063467, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1632030753}
   m_SourcePrefab: {fileID: 100100000, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
 --- !u!4 &117675613 stripped
 Transform:
@@ -1133,7 +1160,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5588383021232907360, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
   m_PrefabInstance: {fileID: 117675612}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1142673824}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a60083a00b00fba478a20a87daead076, type: 3}
@@ -1959,6 +1986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_City (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 53.051155
@@ -2270,6 +2301,10 @@ PrefabInstance:
     - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_Name
       value: Obstacle_City (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2778,7 +2813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50.287, y: -56.945}
+  m_AnchoredPosition: {x: 50.28711, y: -56.944946}
   m_SizeDelta: {x: 254.4263, y: 254.4263}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &437405996
@@ -4964,6 +4999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_City
       objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.81
@@ -6716,7 +6755,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 127
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -7063,6 +7102,10 @@ PrefabInstance:
     - target: {fileID: 557271649024400500, guid: 045bfa6c56d2ded4aad6590d81508d82, type: 3}
       propertyPath: m_Name
       value: Ondel_Woman_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 557271649024400500, guid: 045bfa6c56d2ded4aad6590d81508d82, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 2536061616145892340, guid: 045bfa6c56d2ded4aad6590d81508d82, type: 3}
       propertyPath: m_SortingLayer
@@ -8609,6 +8652,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.556337}
   m_EdgeRadius: 0
+--- !u!1 &1142673824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3627901717261063467, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
+  m_PrefabInstance: {fileID: 117675612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1174886760
 GameObject:
   m_ObjectHideFlags: 0
@@ -9276,8 +9324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.6586, y: -33}
-  m_SizeDelta: {x: 275.6275, y: 89.605}
+  m_AnchoredPosition: {x: 6, y: -33}
+  m_SizeDelta: {x: 347.9662, y: 132.7023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290132732
 MonoBehaviour:
@@ -9308,7 +9356,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -1606929588114848676, guid: eb4465854ebe1534f9575bb04cf245f9, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -9323,7 +9371,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1095236916}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -9355,7 +9403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 368415929699361963, guid: d6a24634ea0f28447b6220a4d028b6ba, type: 3}
+  m_Sprite: {fileID: 8284734199322489709, guid: c9f93e01702a8264c8aaeef6c894b591, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10131,6 +10179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_City (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.67
@@ -10434,6 +10486,10 @@ PrefabInstance:
     - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_Name
       value: Obstacle_City (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11242,12 +11298,29 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4298099115846648623, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
   m_PrefabInstance: {fileID: 117675612}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1142673824}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f48d74aae7e868144a667b55400e5980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputHandler
+--- !u!114 &1632030753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142673824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74324b560735b5548abfc789ad379e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitBlink
+  spriteRenderer: {fileID: 0}
+  obstacleTag: Obstacle
+  blinkDuration: 1
+  blinkInterval: 0.1
+  useWhiteFlash: 0
 --- !u!1 &1648598188
 GameObject:
   m_ObjectHideFlags: 0
@@ -11851,7 +11924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinimapFollow
   target: {fileID: 117675613}
-  clampToBounds: 0
+  clampToBounds: 1
   mapBounds: {fileID: 0}
 --- !u!114 &1696848797
 MonoBehaviour:
@@ -11932,7 +12005,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 50
+  orthographic size: 40
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -12341,8 +12414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -389, y: -30}
-  m_SizeDelta: {x: 308.9446, y: 100.4357}
+  m_AnchoredPosition: {x: -407, y: -33}
+  m_SizeDelta: {x: 347.9662, y: 132.7023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739197416
 MonoBehaviour:
@@ -12373,7 +12446,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -2292145030820231589, guid: 40a6c63045e90b84094e0c093ad48531, type: 3}
+    m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -12388,7 +12461,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1095236916}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -12420,7 +12493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6307240361084744055, guid: 6dc78cc11406c5342a61ade1990bb75c, type: 3}
+  m_Sprite: {fileID: -2671770009858319127, guid: 1193968b6f22fb744b2ab34fb3fa164f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12732,7 +12805,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 127
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -190917,6 +190990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ondel_Man_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2770696145404827977, guid: 739b39f28871328489766299681a78a1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4869293552987328986, guid: 739b39f28871328489766299681a78a1, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -190986,6 +191063,10 @@ PrefabInstance:
     - target: {fileID: 2770696145404827977, guid: 739b39f28871328489766299681a78a1, type: 3}
       propertyPath: m_Name
       value: Ondel_Man_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770696145404827977, guid: 739b39f28871328489766299681a78a1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4869293552987328986, guid: 739b39f28871328489766299681a78a1, type: 3}
       propertyPath: m_SortingLayer
@@ -191068,6 +191149,10 @@ PrefabInstance:
     - target: {fileID: 557271649024400500, guid: 045bfa6c56d2ded4aad6590d81508d82, type: 3}
       propertyPath: m_Name
       value: Ondel_Woman_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 557271649024400500, guid: 045bfa6c56d2ded4aad6590d81508d82, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 2536061616145892340, guid: 045bfa6c56d2ded4aad6590d81508d82, type: 3}
       propertyPath: m_SortingLayer
