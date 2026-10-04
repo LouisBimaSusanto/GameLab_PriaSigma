@@ -1141,7 +1141,7 @@ PrefabInstance:
       objectReference: {fileID: 997207557}
     - target: {fileID: 7958857784431605361, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8392080006382448983, guid: 0b6c20bc7ef89084fa441fd60257c643, type: 3}
       propertyPath: belokFriction
@@ -2830,8 +2830,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50.28711, y: -56.944946}
-  m_SizeDelta: {x: 254.4263, y: 254.4263}
+  m_AnchoredPosition: {x: 33, y: -46}
+  m_SizeDelta: {x: 288.9999, y: 288.9999}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &437405996
 MonoBehaviour:
@@ -5372,6 +5372,10 @@ PrefabInstance:
     - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_Name
       value: Obstacle_City (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8626,6 +8630,10 @@ PrefabInstance:
     - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_Name
       value: Obstacle_City
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088872772397161265, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6771035547951564650, guid: d24bca87308219e4ab84c325a50f2a1f, type: 3}
       propertyPath: m_LocalPosition.x
