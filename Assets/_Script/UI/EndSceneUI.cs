@@ -8,13 +8,12 @@ public class EndSceneUI : MonoBehaviour
 
     [Header("Audio Settings")]
     [Tooltip("Nama BGM yang diputar khusus di End Scene")]
-    [SerializeField] private string endSceneBGMName = "EndScene_BGM"; // Sesuaikan dengan nama audio di AudioManager Anda
+    [SerializeField] private string endSceneBGMName = "EndScene_BGM";
 
     private bool isTransitioning = false;
 
     private void Start()
     {
-        // Putar BGM End Scene saat scene ini mulai dimuat
         if (AudioManager.Instance != null && !string.IsNullOrEmpty(endSceneBGMName))
         {
             AudioManager.Instance.PlayBGM(endSceneBGMName);
