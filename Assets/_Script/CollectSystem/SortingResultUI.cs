@@ -29,6 +29,14 @@ public class SortingResultUI : MonoBehaviour
     [SerializeField] private float starDelay = 0.3f;
     [SerializeField] private float starPunchScale = 1.4f;
 
+    [Header("Audio")]
+    [Tooltip("Nama SFX yang akan diputar saat Result UI muncul")]
+    [SerializeField] private string levelClearSfxName = "level_clear";
+
+    [Header("Scene Transition")]
+    [Tooltip("Nama scene 'Terima Kasih' yang dituju setelah level ini selesai")]
+    [SerializeField] private string thankYouSceneName = "EndScene";
+
     private Action onCompleteCallback;
 
     private void Awake()
@@ -54,7 +62,7 @@ public class SortingResultUI : MonoBehaviour
 
     public void Show(int sessionScore, int perfectScore, Action onComplete)
     {
-        onCompleteCallback = onComplete;
+        onCompleteCallback = onComplete; 
 
         Timer.Instance?.PauseTimer();
 
@@ -70,14 +78,20 @@ public class SortingResultUI : MonoBehaviour
         int stars = CalculateStarsBasedOnTime(currentRemaining);
 
         panel.SetActive(true);
+
+        if (AudioManager.Instance != null && !string.IsNullOrEmpty(levelClearSfxName))
+        {
+            AudioManager.Instance.PlaySFX(levelClearSfxName);
+        }
+
         AnimateStars(stars);
     }
 
     private int CalculateStarsBasedOnTime(float remainingTime)
     {
-        if (remainingTime >= 15f) return 3; // Bintang 3: Sisa waktu >= 15 detik
-        if (remainingTime >= 5f) return 2;  // Bintang 2: Sisa waktu antara 5 - 14.99 detik
-        if (remainingTime > 0f) return 1;   // Bintang 1: Sisa waktu di bawah 5 detik
+        if (remainingTime >= 15f) return 3;
+        if (remainingTime >= 5f) return 2;
+        if (remainingTime > 0f) return 1;
 
         return 0;
     }
@@ -122,6 +136,16 @@ public class SortingResultUI : MonoBehaviour
     private void OnContinueClicked()
     {
         panel.SetActive(false);
-        onCompleteCallback?.Invoke();
+
+        Time.timeScale = 1f;
+
+        if (SceneTransition.Instance != null)
+        {
+            SceneTransition.Instance.LoadSceneWithLoading(thankYouSceneName);
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(thankYouSceneName);
+        }
     }
 }

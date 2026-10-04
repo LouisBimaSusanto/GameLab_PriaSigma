@@ -16,8 +16,9 @@ MonoBehaviour:
   wasteCategory: 1
   itemSprite: {fileID: -8542059514010371876, guid: b362cb4c5860ce04ebb59c1891f1978a, type: 3}
   scoreValue: 1
-  description: 'Kategori: Sampah Anorganik / Daur Ulang
+  description: 'Kategori: Sampah Organik
 
-    Sisa sisa limbah berbahan
-    plastik sintetis. Tidak bisa membusuk secara alami dan butuh puluhan hingga ratusan
-    tahun untuk terurai. Bisa diolah kembali di Tempat Daur Ulang.'
+    Sisa sisa limbah hayati dari bahan
+    masakan atau sisa makanan. Sangat mudah membusuk dan terurai secara alami oleh
+    mikroorganisme dalam hitungan hari. Bisa diolah kembali di Tempat Pembuatan Kompos
+    untuk menjadi pupuk organik.'

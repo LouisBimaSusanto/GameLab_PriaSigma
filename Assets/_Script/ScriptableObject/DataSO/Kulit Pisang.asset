@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41242ee14789eb54a9861799dd4fbae7, type: 3}
+  m_Name: Kulit Pisang
+  m_EditorClassIdentifier: Assembly-CSharp::WasteItemData
+  itemName: Kulit Pisang
+  wasteCategory: 1
+  itemSprite: {fileID: -2780173295609163797, guid: 7db7dfade0a5a1d44beebef15f234886, type: 3}
+  scoreValue: 1
+  description: 'Kategori: Sampah Organik
+
+    Sisa sisa limbah hayati dari buah-buahan.
+    Sangat mudah membusuk dan terurai secara alami oleh mikroorganisme dalam beberapa
+    hari hingga minggu. Bisa diolah kembali di Tempat Pembuatan Kompos untuk menjadi
+    pupuk kaya nutrisi.'

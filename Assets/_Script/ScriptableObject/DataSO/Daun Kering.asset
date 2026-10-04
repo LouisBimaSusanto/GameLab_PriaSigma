@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41242ee14789eb54a9861799dd4fbae7, type: 3}
+  m_Name: Daun Kering
+  m_EditorClassIdentifier: Assembly-CSharp::WasteItemData
+  itemName: Daun Kering
+  wasteCategory: 1
+  itemSprite: {fileID: -2374488268639931676, guid: 241fcdb7227e0e949b015caabc799f1a, type: 3}
+  scoreValue: 1
+  description: 'Kategori: Sampah Organik
+
+    Sisa sisa limbah hayati dari pepohonan.
+    Dapat membusuk dan terurai secara alami oleh tanah dalam hitungan minggu. Bisa
+    diolah kembali di Tempat Pembuatan Kompos atau dijadikan mulsa tanah.'

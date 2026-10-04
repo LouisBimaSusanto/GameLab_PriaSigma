@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WasteItemData
   itemName: Battery
   wasteCategory: 2
-  itemSprite: {fileID: -2728379295028247281, guid: 399ee58912a159842be28f6e7e062dbe, type: 3}
+  itemSprite: {fileID: -8738764871478897471, guid: 04a1c63de8137324c82c307c21ab152f, type: 3}
   scoreValue: 1
-  description: 'Kategori: Sampah Anorganik / Daur Ulang
+  description: 'Kategori: Sampah B3 (Bahan Berbahaya dan Beracun) / Anorganik
 
-    Sisa sisa limbah berbahan
-    plastik sintetis. Tidak bisa membusuk secara alami dan butuh puluhan hingga ratusan
-    tahun untuk terurai. Bisa diolah kembali di Tempat Daur Ulang.'
+    Sisa
+    sisa limbah kimia beracun yang mengandung logam berat. Tidak bisa membusuk dan
+    berbahaya jika dibuang sembarangan. Harus diproses secara khusus di Tempat Pengolahan
+    Limbah B3.'

@@ -78,3 +78,23 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 07bd5b08620b9374895f77e45dbe08da, type: 3}
     volume: 1
     pitch: 1
+  - name: wrong trash type
+    clip: {fileID: 8300000, guid: 1a2f50801364481479944d2798f11e0d, type: 3}
+    volume: 1
+    pitch: 1
+  - name: level clear
+    clip: {fileID: 8300000, guid: a5cd6675aec61ee4ca915791f7201164, type: 3}
+    volume: 1
+    pitch: 1
+  - name: level failure
+    clip: {fileID: 8300000, guid: 8ec4bcaf2288f44489111524f7574422, type: 3}
+    volume: 1
+    pitch: 1
+  - name: correct sorting
+    clip: {fileID: 8300000, guid: db542e3e6f4762043ad85925f659d3d6, type: 3}
+    volume: 1
+    pitch: 1
+  - name: collect
+    clip: {fileID: 8300000, guid: 238b614e242fc214d9407111e5e2a0ae, type: 3}
+    volume: 1
+    pitch: 1

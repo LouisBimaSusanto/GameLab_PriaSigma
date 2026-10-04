@@ -15,6 +15,10 @@ public class HitBlink : MonoBehaviour
     [Tooltip("Centang jika memakai material Shader Graph dengan property _FlashAmount")]
     [SerializeField] private bool useWhiteFlash = false;
 
+    [Header("Audio Settings")]
+    [Tooltip("Nama SFX yang diputar saat menabrak obstacle")]
+    [SerializeField] private string crashSfxName = "crash";
+
     private Coroutine blinkRoutine;
     private Color originalColor;
 
@@ -61,6 +65,11 @@ public class HitBlink : MonoBehaviour
     {
         if (blinkRoutine != null)
             StopCoroutine(blinkRoutine);
+
+        if (AudioManager.Instance != null && !string.IsNullOrEmpty(crashSfxName))
+        {
+            AudioManager.Instance.PlaySFX(crashSfxName);
+        }
 
         blinkRoutine = StartCoroutine(BlinkRoutine());
     }

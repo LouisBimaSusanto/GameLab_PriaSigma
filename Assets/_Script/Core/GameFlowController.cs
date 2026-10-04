@@ -136,9 +136,21 @@ public class GameFlowController : MonoBehaviour
     {
         if (CurrentState == GameState.Sorting) return;
         StageManager.Instance.SaveProgress();
+
+        PauseGameplay();
+
         IrisTransition.Instance.CloseOnly(onComplete: () =>
         {
-            // TODO: Game Over UI
+
+            // Panggil UI Game Over
+            if (GameOverUI.Instance != null)
+            {
+                GameOverUI.Instance.ShowGameOver();
+            }
+            else
+            {
+                Debug.LogWarning("GameOverUI tidak ditemukan di Scene!");
+            }
         });
     }
 }

@@ -146,7 +146,7 @@ public class SortingUIController : MonoBehaviour
 
     private void HandleCorrectDrop(SortingItemUI item, Transform dropZoneTransform)
     {
-        AudioManager.Instance?.PlaySFX("correct");
+        AudioManager.Instance?.PlaySFX("correct sorting");
         StageManager.Instance.AddSessionScore(item.Data.scoreValue);
         activeItems.Remove(item);
 
@@ -158,7 +158,7 @@ public class SortingUIController : MonoBehaviour
 
     private void HandleWrongDrop(SortingItemUI item)
     {
-        AudioManager.Instance?.PlaySFX("wrong");
+        AudioManager.Instance?.PlaySFX("wrong trash type");
         StageManager.Instance.AddSessionScore(-1);
         item.PlayWrongAnimation();
     }

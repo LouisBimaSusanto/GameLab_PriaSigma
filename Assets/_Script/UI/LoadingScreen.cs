@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public static class LoadingData
 {
-    public static string TargetScene = "Stage1";
+    public static string TargetScene = "Cutscene_Prolog";
 }
 
 public class LoadingScreen : MonoBehaviour

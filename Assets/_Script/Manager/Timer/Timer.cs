@@ -39,10 +39,19 @@ public class Timer : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         TimerUIBinder binder = UnityEngine.Object.FindFirstObjectByType<TimerUIBinder>();
+
         if (binder != null)
+        {
             SetTimerText(binder.timerText);
+
+            ResetTimer(InitialTime);
+        }
         else
+        {
             timerText = null;
+
+            PauseTimer();
+        }
     }
 
     void Start()
@@ -80,7 +89,6 @@ public class Timer : MonoBehaviour
     {
         Debug.Log("Waktu habis!");
         OnTimeUp?.Invoke();
-        Time.timeScale = 0f;
     }
 
     public void StopTimer()

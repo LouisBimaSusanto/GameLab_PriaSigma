@@ -16,8 +16,9 @@ MonoBehaviour:
   wasteCategory: 2
   itemSprite: {fileID: -8624086772688453452, guid: af8c7348c78ff2e418205a336e9f35dd, type: 3}
   scoreValue: 1
-  description: 'Kategori: Sampah Anorganik / Daur Ulang
+  description: 'Kategori: Sampah B3 (Bahan Berbahaya dan Beracun) / Residu
 
-    Sisa sisa limbah berbahan
-    plastik sintetis. Tidak bisa membusuk secara alami dan butuh puluhan hingga ratusan
-    tahun untuk terurai. Bisa diolah kembali di Tempat Daur Ulang.'
+    Sisa
+    sisa limbah kaca tajam yang mengandung merkuri atau zat kimia berbahaya. Tidak
+    bisa membusuk dan berisiko melukai serta mencemari lingkungan. Harus diproses
+    secara khusus di Tempat Pengolahan Limbah B3.'
